@@ -251,7 +251,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2019/07/14/java-01/" target="_blank">java-01</a>
+	  <a class="article-title" href="/2020/05/14/java-01/" target="_blank">java-01</a>
   
     </h1>
   
@@ -259,8 +259,8 @@
 
   
   
-<a href="/2019/07/14/java-01/" class="archive-article-date">
-        <time datetime="2019-07-14T12:01:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-14</time>
+<a href="/2020/05/14/java-01/" class="archive-article-date">
+        <time datetime="2020-05-14T12:01:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-14</time>
 </a>
 
   
@@ -276,216 +276,10 @@
     
     
     <h1 id="一、基础常识和开发环境搭建"><a href="#一、基础常识和开发环境搭建" class="headerlink" title="一、基础常识和开发环境搭建"></a>一、基础常识和开发环境搭建</h1><h3 id="1-1-进制与字节"><a href="#1-1-进制与字节" class="headerlink" title="1.1 进制与字节"></a>1.1 进制与字节</h3><p>计算机中的数据不同于人们生活中的数据，人们生活采用十进制数，而计算机中全部采用二进制数表示，它只包含</p>
-<p>0、1两个数，逢二进一，1+1=10。其中每一个0或者每一个1，叫做一个bit（比特）。</p>
-<p>下面了解一下十进制和二进制数据之间的转换计算。</p>
-<ul>
-<li>十进制数据转成二进制数据：使用除以2获取余数的方式</li>
-<li>二进制数据转成十进制数据：使用8421编码的方式</li>
-</ul>
-<blockquote>
-<p>二进制数系统中，每个0或1就是一个位，叫做bit（比特）。</p>
-</blockquote>
-<p><strong>字节</strong></p>
-<p>字节是我们常见的计算机中最小存储单元。计算机存储任何的数据，都是以字节的形式存储，右键点击文件属性，  我们可以查看文件的字节大小。</p>
-<ul>
-<li><p>位（bit）：一个数字0或者一个数字1，代表一位。</p>
-</li>
-<li><p>字节（Byte）：每逢8位是一个字节，这是数据存储的最小单位。</p>
-</li>
-</ul>
-<p>8个bit（二进制位） 0000-0000表示为1个字节，写成1 byte或者1 B。8 bit = 1 B</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1024 B &#x3D;1 KB</span><br><span class="line">1024 KB &#x3D;1 MB</span><br><span class="line">1024 MB &#x3D;1 GB</span><br><span class="line">1024 GB &#x3D; 1 TB</span><br><span class="line">1024 TB &#x3D; 1 PB</span><br><span class="line">1024 PB &#x3D; 1 EB</span><br><span class="line">1024 EB &#x3D; 1 ZB</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-2-计算机和用户的交互方式："><a href="#1-2-计算机和用户的交互方式：" class="headerlink" title="1.2 计算机和用户的交互方式："></a>1.2 计算机和用户的交互方式：</h3><ul>
-<li>图形化界面 vs 命令行方式</li>
-</ul>
-<h3 id="1-3Dos命令："><a href="#1-3Dos命令：" class="headerlink" title="1.3Dos命令："></a>1.3Dos命令：</h3><p><strong>MS-DOS(Microsoft Disk Operating System)：命令提示符（cmd）</strong></p>
-<ul>
-<li><p>进入DOS操作窗口</p>
-<ul>
-<li>按下键盘<code>Windows</code>+<code>R</code>，打开运行窗口，输入<code>cmd</code>回车，进入到DOS的操作窗口。</li>
-<li>或者，在资源管理器的地址栏输入cmd回车，可以看到一个路径 c:\user 就表示我们现在操作的磁盘是c盘。</li>
-</ul>
-</li>
-<li><p>常用的Dos命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">盘符名:</span><br><span class="line">说明：盘符切换命令</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dir</span><br><span class="line">说明：列出当前目录下的文件与文件夹</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">md 文件夹名</span><br><span class="line">说明：创建目录</span><br><span class="line">示例：md title #创建title文件夹</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rd 文件夹名</span><br><span class="line">说明：删除目录</span><br><span class="line">示例：rd title #删除title文件夹</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd 文件夹名</span><br><span class="line">说明：进入指定目录</span><br><span class="line">示例：cd program file #进入program file文件夹</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ..</span><br><span class="line">说明：返回上一级目录</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd \</span><br><span class="line">说明：退回到根目录</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">del 文件名</span><br><span class="line">说明：删除文件</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">exit</span><br><span class="line">说明：退出dos命令行</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">echo</span><br><span class="line">说明：打印命令</span><br><span class="line">使用echo直接在命令窗口打印</span><br><span class="line">使用echo &gt;覆盖写</span><br><span class="line">使用echo &gt;&gt;追加写</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cls</span><br><span class="line">说明：清屏命令</span><br></pre></td></tr></table></figure>
-<ul>
-<li>常用快捷键</li>
-</ul>
-<p>:arrow_left:和:arrow_right:：移动光标</p>
-<p>:arrow_down:和:arrow_up:：调阅历史操作命令</p>
-<p><code>Delete</code>和<code>Backspace</code>删除字符</p>
-<h3 id="1-3-Java概述"><a href="#1-3-Java概述" class="headerlink" title="1.3 Java概述"></a>1.3 Java概述</h3><ul>
-<li>什么是Java语言</li>
-</ul>
-<p>Java语言是美国Sun公司（Stanford University Network），在1995年推出的高级的编程语言。所谓编程语言，是计算机的语言，人们可以使用编程语言对计算机下达命令，让计算机完成人们需要的功能。</p>
-<ul>
-<li><p><strong>Java**</strong>语言发展历史**</p>
-<ul>
-<li>1995年Sun公司发布Java1.0版本</li>
-<li>1997年发布Java 1.1版本</li>
-<li>1998年发布Java 1.2版本</li>
-<li>2000年发布Java 1.3版本</li>
-<li>2002年发布Java 1.4版本</li>
-<li>2004年发布Java 1.5版本</li>
-<li>2006年发布Java 1.6版本</li>
-<li>2009年Oracle甲骨文公司收购Sun公司，并于2011发布Java 1.7版本</li>
-<li>2014年发布Java 1.8版本</li>
-<li>2017年发布Java 9.0版本</li>
-</ul>
-</li>
-<li><p>jdk1.5开始更名为5.0： 1.5 -&gt; 5.0   1.6 -&gt; 6.0 ……    </p>
-<ul>
-<li>JavaSE(J2SE) : 桌面级应用开发（废弃） + 核心类库（Java基础学习的部分）</li>
-<li>JavaEE(J2EE) ： 企业级开发 （后台-web）</li>
-<li>JavaME(J2ME) ： 手机或小智能设备（废弃了） 已经被Android所替代</li>
-</ul>
-</li>
-</ul>
-<h2 id="Ⅱ、-Java语言应用的领域"><a href="#Ⅱ、-Java语言应用的领域" class="headerlink" title="Ⅱ、 Java语言应用的领域"></a>Ⅱ、 Java语言应用的领域</h2><h3 id="2-1-Java语言的特点"><a href="#2-1-Java语言的特点" class="headerlink" title="2.1 Java语言的特点"></a>2.1 Java语言的特点</h3><ul>
-<li>面向对象：面向对象的三大特性<ul>
-<li>①继承性 </li>
-<li>②封装性 </li>
-<li>③多态性 </li>
-</ul>
-</li>
-<li>健壮性  ：<ul>
-<li> ①去掉了C或C++中的指针  </li>
-<li>②增加垃圾回收机制（GC）</li>
-</ul>
-</li>
-<li>跨平台性：一次编译到处运行（依赖于JVM-不同平台有不同的JVM）</li>
-</ul>
-<p><img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201104163128.png" alt="img"></p>
-<h2 id="Ⅲ-、开发环境的搭建"><a href="#Ⅲ-、开发环境的搭建" class="headerlink" title="Ⅲ 、开发环境的搭建"></a>Ⅲ 、开发环境的搭建</h2><h3 id="3-1JDK、JRE、JVM的关系"><a href="#3-1JDK、JRE、JVM的关系" class="headerlink" title="3.1JDK、JRE、JVM的关系"></a>3.1JDK、JRE、JVM的关系</h3><ul>
-<li><strong>JRE</strong>  ( Java Runtime Environment) ：是Java程序的运行时环境，包含<strong>JVM</strong>和运行时所需要的<strong>核心类库</strong> 。</li>
-<li><strong>JDK</strong>  ( Java Development Kit)：是Java程序开发工具包，包含<strong>JRE</strong>和开发人员使用的工具。</li>
-</ul>
-<p><img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201104161841.png" alt="JDK和JRE关系图"></p>
-<blockquote>
-<p>三者关系： JDK &gt; JRE &gt; JVM</p>
-<p>我们想要运行一个已有的Java程序，那么只需安装JRE即可。</p>
-<p>我们想要开发一个全新的Java程序，那么必须安装JDK。</p>
-</blockquote>
-<p><img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201104162003.png" alt="img"></p>
-<h3 id="3-2-JDK的下载、安装"><a href="#3-2-JDK的下载、安装" class="headerlink" title="3.2 JDK的下载、安装 :"></a>3.2 JDK的下载、安装 :</h3><ul>
-<li><a target="_blank" rel="noopener" href="https://www.oracle.com/technetwork/java/javase/overview/index.html">JDk下载地址</a></li>
-</ul>
-<blockquote>
-<p>傻瓜式安装</p>
-<p>安装路径中，不要包含中文和空格。</p>
-</blockquote>
-<h2 id="Ⅳ-环境变量的配置"><a href="#Ⅳ-环境变量的配置" class="headerlink" title="Ⅳ 环境变量的配置"></a>Ⅳ 环境变量的配置</h2><h3 id="4-1为什么要配置环境变量-："><a href="#4-1为什么要配置环境变量-：" class="headerlink" title="4.1为什么要配置环境变量 ："></a>4.1为什么要配置环境变量 ：</h3><p>为了开发方便，我们想<strong>在任意的目录下都可以使用JDK的开发工具</strong>，则必须要配置环境变量；</p>
-<p>配置环境变量的意义在于告诉操作系统，我们使用的JDK开发工具在哪个目录下。</p>
-<h3 id="4-2如何配置？"><a href="#4-2如何配置？" class="headerlink" title="4.2如何配置？"></a>4.2如何配置？</h3><p>此电脑鼠标右键 –&gt; 选择属性–&gt;选择高级系统设置 –&gt; 选择 环境变量，分别配置</p>
-<ul>
-<li><p>新建JAVA_HOME</p>
-<ul>
-<li><code>D:\DevelopTools\Java\jdk-9.0.1</code></li>
-</ul>
-</li>
-<li><p>选中Path 环境变量， 双击或者点击编辑</p>
-<ul>
-<li>添加<code>%JAVA_HOME%\bin</code>，必须是英文格式。选中该行，上移到最上方，点击确定</li>
-</ul>
-<p>环境变量配置完成，打开cmd，输入以下指令测试配置是否成功：</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br><span class="line">以及</span><br><span class="line">javac</span><br></pre></td></tr></table></figure>
-
-<h1 id="二、HelloWorld"><a href="#二、HelloWorld" class="headerlink" title="二、HelloWorld"></a>二、HelloWorld</h1><h2 id="Ⅰ、开发体验——HelloWorld"><a href="#Ⅰ、开发体验——HelloWorld" class="headerlink" title="Ⅰ、开发体验——HelloWorld"></a>Ⅰ、开发体验——HelloWorld</h2><h3 id="1-1程序开发步骤说明"><a href="#1-1程序开发步骤说明" class="headerlink" title="1.1程序开发步骤说明"></a>1.1程序开发步骤说明</h3><p>开发环境已经搭建完毕，可以开发我们第一个Java程序了。</p>
-<p>Java程序开发三步骤：<strong>编写、编译、运行。</strong></p>
-<p><img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201104163448.png" alt="img"></p>
-<h3 id="1-2-第一个java程序"><a href="#1-2-第一个java程序" class="headerlink" title="1.2 第一个java程序"></a>1.2 第一个java程序</h3><p>在任意目录下新建文本文件，完整的文件名修改为HelloWorld.java ，其中文件名为HelloWorld ，后缀名必须为.java 。</p>
-<p>使用文本编辑器打开，键入代码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">&quot;HelloWorld&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>注意：<br>保存的文件后缀名必须为.java ，且保证文件名和类的名字是一致的，注意大小写。</p>
-</blockquote>
-<p>第一个HelloWord 源程序就编写完成了，但是这个文件是程序员编写的，JVM是看不懂的，也就不能运行，因此我们必须将编写好的Java源文件编译成JVM可以看懂的字节码文件 。</p>
-<h3 id="1-3编译执行"><a href="#1-3编译执行" class="headerlink" title="1.3编译执行"></a>1.3编译执行</h3><p>由于配置了环境变量，现在相关指令可以再任意目录下使用。</p>
-<p>在DOS命令行中，<strong>进入Java源文件的目录</strong>，使用javac 命令进行编译</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javac Java源文件名.后缀名  # java编译指令</span><br></pre></td></tr></table></figure>
-
-<p>编译成功后，命令行没有任何提示。打开源文件存放目录，发现产生了一个新的文件 HelloWorld.class ，该文件就是编译后的文件，是Java的可运行文件，称为字节码文件，有了字节码文件，就可以运行程序了。</p>
-<p>Java源文件的编译工具javac.exe ，在DOS命令行中，进入Java源文件的目录，使用java 命令进行运行。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java 类名字  #这里不能有后缀</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>说明：</p>
-<p><strong>1. 编译和运行是两回事</strong></p>
-<p><strong>编译：</strong>是指将我们编写的Java源文件翻译成JVM认识的class文件，在这个过程中， javac 编译器会检查我们所写的程序是否有错误，有错误就会提示出来，如果没有错误就会编译成功。</p>
-<p><strong>运行：</strong>是指将class文件 交给JVM去运行，此时JVM就会去执行我们编写的程序了。</p>
-<p><strong>2. 关于main方法</strong></p>
-<p><strong>main方法：</strong>称为主方法。写法是固定格式不可以更改。main方法是程序的入口点或起始点，无论我们编写多少程序，JVM在运行的时候，都会从main方法这里开始执行。</p>
-</blockquote>
-<h2 id="Ⅱ、常见问题的解决"><a href="#Ⅱ、常见问题的解决" class="headerlink" title="Ⅱ、常见问题的解决"></a>Ⅱ、常见问题的解决</h2><ul>
-<li>javac：找不到文件<ul>
-<li>源文件名不存在或者写错</li>
-<li>当前路径错误</li>
-<li>后缀名隐藏问题</li>
-</ul>
-</li>
-<li>错误：类HelloWorld是公共的，应在名为HellWorld.java的文件中声明<ul>
-<li>声明为public的类应与文件名一致，否则编译失败</li>
-</ul>
-</li>
-<li>错误：需要‘；’<ul>
-<li>编译失败，注意错误出现的行数，再到源码中指定位置改错</li>
-</ul>
-</li>
-</ul>
-<p>三 总结第一个程序<br>    总结：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">创建：创建一个以&quot;.java&quot;结尾的文件，该文件叫作源文件。</span><br><span class="line">编译：&quot;javac 源文件名.java&quot; 进行编译，生成一个或多个以&quot;.class&quot;结尾的文件，该文件叫作字节码文节</span><br><span class="line">运行：&quot;java 字节码文件名&quot;进行运行</span><br></pre></td></tr></table></figure>
-
-<p>说明：</p>
-<pre><code>1. 一个源文件中有几个类编译后就会生成几个字节码文件。
- 2. 字节码文件名和类名一致。
- 3. 一个源文件中可以有多个类，类名不能相同且使用public修饰的类只能有一个。
- 4. java严格区分大小写
- 5. public修饰的类的类名必须和源文件的名称一致
- 6. 每个语句后面以&quot;;&quot;结尾
- 7. 一个程序中只能有一个程序的入口。</code></pre>
-<h1 id="二、API和编程风格"><a href="#二、API和编程风格" class="headerlink" title="二、API和编程风格"></a>二、API和编程风格</h1><h2 id="Ⅰ、Java-API-文档（Application-Programming-Interface）"><a href="#Ⅰ、Java-API-文档（Application-Programming-Interface）" class="headerlink" title="Ⅰ、Java API 文档（Application Programming Interface）"></a>Ⅰ、Java API 文档（Application Programming Interface）</h2><p>类似于新华字典。API文档是Oracle公司提供的关于Java的一套开发说明。不同版本在官网上都有提供。<a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/8/docs/api/">Java8版本</a></p>
-<h2 id="Ⅱ、良好的编程风格"><a href="#Ⅱ、良好的编程风格" class="headerlink" title="Ⅱ、良好的编程风格"></a>Ⅱ、良好的编程风格</h2><p><img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201104165254.png" alt="image-20201104165254550"></p>
-<blockquote>
-<p>注意：使用tab缩进操作，只有在设置tab为4个空格时使用</p>
-</blockquote>
-<h2 id="Ⅲ、注释"><a href="#Ⅲ、注释" class="headerlink" title="Ⅲ、注释"></a>Ⅲ、注释</h2><p>注释的作用 ： 1.提高了代码的阅读性   2.调试程序的重要手段<br>例如：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一行的第三个单词必须和所在的文件名称完全一样，大小写也要一样</span></span><br><span class="line"><span class="comment">// public class后面代表定义一个类的名称，类是Java当中所有源代码的基本组织单位。</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> </span>&#123;</span><br><span class="line">   <span class="comment">// 第二行的内容是万年不变的固定写法，代表main方法</span></span><br><span class="line">   <span class="comment">// 这一行代表程序执行的起点</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">      <span class="comment">// 第三行代表打印输出语句（其实就是屏幕显示）</span></span><br><span class="line">      <span class="comment">// 希望显示什么东西，就在小括号当中填写什么内容</span></span><br><span class="line">      System.out.println(<span class="string">&quot;Hello, World!!!&quot;</span>);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">单行注释 ：<span class="comment">// 注释内容</span></span><br><span class="line">多行注释 ：<span class="comment">/* 注释内容  */</span></span><br><span class="line">文档注释 ：<span class="comment">/** 注释内容 */</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>文档注释：<ol>
-<li>文档注释是java特有的</li>
-<li>作用 ：用来生成类的说明文档</li>
-<li>生成文档的命令 ：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">javadoc -d mydoc -author -version 源文件名.java</span><br><span class="line">javadoc : 开发工具集</span><br><span class="line">-d : 参数</span><br><span class="line">mydoc : 生成的文档所在的目录名</span><br><span class="line">-author -version : 文档注释中使用到的注解</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>注意 ： </p>
-<p>1.注释不会被编译到字节码文件中（注释不影响代码的执行）<br>2.多行注释不能嵌套使用</p>
-</blockquote>
-</li>
-</ol>
-</li>
-</ul>
-<p>阅读材料：</p>
-
+<p>0、1两个数，逢二进一，1+1=10。其中每一个0或者每一个1，叫做一个bit（比特）。
+    
+    <a class="article-more-a" href="/2020/05/14/java-01/#more">more >></a>
+    
     
 
     
@@ -522,7 +316,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2019/07/14/java-01/">展开全文 >></a>
+      <a class="article-more-a" href="/2020/05/14/java-01/">展开全文 >></a>
     </p>
     
 
@@ -561,7 +355,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2019/03/12/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BF%85%E5%A4%87%E7%9A%84%E8%87%AA%E5%AD%A6%E8%B5%84%E6%BA%90/" target="_blank">程序员必备的自学资源</a>
+	  <a class="article-title" href="/2019/07/12/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BF%85%E5%A4%87%E7%9A%84%E8%87%AA%E5%AD%A6%E8%B5%84%E6%BA%90/" target="_blank">程序员必备的自学资源</a>
   
     </h1>
   
@@ -569,8 +363,8 @@
 
   
   
-<a href="/2019/03/12/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BF%85%E5%A4%87%E7%9A%84%E8%87%AA%E5%AD%A6%E8%B5%84%E6%BA%90/" class="archive-article-date">
-        <time datetime="2019-03-12T11:51:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-12</time>
+<a href="/2019/07/12/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BF%85%E5%A4%87%E7%9A%84%E8%87%AA%E5%AD%A6%E8%B5%84%E6%BA%90/" class="archive-article-date">
+        <time datetime="2019-07-12T11:51:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-12</time>
 </a>
 
   
@@ -587,7 +381,7 @@
     
     <h3 id="程序员必备的自学资源"><a href="#程序员必备的自学资源" class="headerlink" title="程序员必备的自学资源"></a>程序员必备的自学资源</h3><p>学习一门语言或者一个工具，最优质的学习网站就是他的官方网站，官方文档。然而在遇到一些自己无法解决的问题时，使用一些优质的网络资源指导我们对技术的学习及应用就很有必要了，以下列举个人认为比较值得收藏的网站，后续还会继续整理：
     
-    <a class="article-more-a" href="/2019/03/12/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BF%85%E5%A4%87%E7%9A%84%E8%87%AA%E5%AD%A6%E8%B5%84%E6%BA%90/#more">more >></a>
+    <a class="article-more-a" href="/2019/07/12/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BF%85%E5%A4%87%E7%9A%84%E8%87%AA%E5%AD%A6%E8%B5%84%E6%BA%90/#more">more >></a>
     
     
 
@@ -625,7 +419,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2019/03/12/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BF%85%E5%A4%87%E7%9A%84%E8%87%AA%E5%AD%A6%E8%B5%84%E6%BA%90/">展开全文 >></a>
+      <a class="article-more-a" href="/2019/07/12/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BF%85%E5%A4%87%E7%9A%84%E8%87%AA%E5%AD%A6%E8%B5%84%E6%BA%90/">展开全文 >></a>
     </p>
     
 
