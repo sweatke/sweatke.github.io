@@ -57,14 +57,18 @@
 
 </head>
 
+  <script type="text/javascript"
+  color="0,0,255" opacity='0.9' zIndex="-1" count="300" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
 <body>
+  
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
 
 
-<div class="overlay" style="background: #4d4d4d;"></div>
+<div class="overlay" style="background: rgba(0,0,0,0.5);background: url('/img/southeast.jpg') no-repeat ;"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -82,9 +86,11 @@
 			
 				<li><a href="/" target="_blank">主页</a></li>
 			
-				<li><a href="https://www.jianshu.com/u/b80beb9feb9c" target="_blank">笔记</a></li>
+				<li><a href="/tags" target="_blank">标签</a></li>
 			
-				<li><a href="/tags/%E9%9A%8F%E7%AC%94/" target="_blank">随笔</a></li>
+				<li><a href="/categories" target="_blank">分类</a></li>
+			
+				<li><a href="/archives/index.html" target="_blank">归档</a></li>
 			
 			</ul>
 		</nav>
@@ -92,7 +98,7 @@
 			总文章数 1
 		</nav>
 		<nav>
-			总字数 <span class="post-count">2.4k</span>
+			总字数 <span class="post-count">3.5k</span>
 		</nav>
 		<nav class="header-smart-menu">
 			
@@ -100,6 +106,8 @@
 					<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
 				
 			
+				
+					<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">常看的</a>
 				
 			
 				
@@ -132,11 +140,11 @@
 			
 			
 			<div>
-				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="240" height="86" src="//music.163.com/outchain/player?type=2&id=428649319&auto=1&height=66"></iframe>
+				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="240" height="86" src="//music.163.com/outchain/player?type=2&id=428649319&auto=0&height=66"></iframe>
 			</div>
 			
 				
-				<p style="font-size: 12px;">这似乎是首纯音乐，请尽情的欣赏它吧！<p>
+				<p style="font-size: 12px;">每个人的内心都有一只不羁的狮子<p>
 			
 		
 		</nav>
@@ -144,7 +152,7 @@
 </div>
 
     </div>
-    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse" style="background: /img/timg.jpg no-repeat 100%;background-size:cover;opacity:0.7;filter:alpha(opacity=70);">
       
       
       <a class="forkMe" style="position:absolute;z-index:999;top:0;right:0.5em;" 
@@ -154,7 +162,7 @@
       
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: rgba(0,0,0,0.5)"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -172,6 +180,8 @@
 			<p class="header-subtitle"><i class="icon icon-quo-left"></i>Magus Never Sleep<i class="icon icon-quo-right"></i></p>
 			
 			
+			
+				
 			
 				
 			
@@ -206,11 +216,13 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
+					<li style="width: 25%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a target="_blank" rel="noopener" href="https://www.jianshu.com/u/b80beb9feb9c">笔记</a></li>
+					<li style="width: 25%"><a href="/tags">标签</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 25%"><a href="/categories">分类</a></li>
+		        
+					<li style="width: 25%"><a href="/archives/index.html">归档</a></li>
 		        
 				</ul>
 			</nav>
@@ -227,9 +239,16 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <script src="/lib/oauthcallback.browser.js"></script>
+  
+  <script>
+    Oauthcallback();
+  </script>
+
 
   
-    <article id="post-栈和队列" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-程序员必备的自学资源" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -238,7 +257,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2019/07/15/%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/" target="_blank">栈和队列</a>
+	  <a class="article-title" href="/2020/07/12/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BF%85%E5%A4%87%E7%9A%84%E8%87%AA%E5%AD%A6%E8%B5%84%E6%BA%90/" target="_blank">程序员必备的自学资源</a>
   
     </h1>
   
@@ -246,8 +265,8 @@
 
   
   
-<a href="/2019/07/15/%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/" class="archive-article-date">
-        <time datetime="2019-07-14T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-15</time>
+<a href="/2020/07/12/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BF%85%E5%A4%87%E7%9A%84%E8%87%AA%E5%AD%A6%E8%B5%84%E6%BA%90/" class="archive-article-date">
+        <time datetime="2020-07-12T11:51:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-12</time>
 </a>
 
   
@@ -259,14 +278,389 @@
   </header>
   
   <div class="article-entry" itemprop="articleBody">
+        
     
-    <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>栈的特点是后入先出</p>
-<img src="https://img.fuiboom.com/img/stack.png" alt="image.png" style="zoom:67%;" />
+    
+    <h3 id="程序员必备的自学资源"><a href="#程序员必备的自学资源" class="headerlink" title="程序员必备的自学资源"></a>程序员必备的自学资源</h3><p>学习一门语言或者一个工具，最优质的学习网站就是他的官方网站，官方文档。然而在遇到一些自己无法解决的问题时，使用一些优质的网络资源指导我们对技术的学习及应用就很有必要了，以下列举个人认为比较值得收藏的网站，后续还会继续整理：</p>
+<ul>
+<li>Google：<a target="_blank" rel="noopener" href="https://google.com/">https://google.com</a></li>
+</ul>
+<p>这个不用多说了吧，查资料，有问题，Google 一下。当然，能访问的人自然会用，访问不了得人，就用别的吧。当然，国内的同学要流畅使用的话，科学的上网可是很重要的</p>
+<ul>
+<li>必应：<a target="_blank" rel="noopener" href="https://cn.bing.com/">https://cn.bing.com/</a></li>
+</ul>
+<p>微软旗下，在学校的时候比较喜欢用的一款搜索引擎，目前Bing分为了国内版和国际版。建议使用国际版，无广告，提供了相关热词的关联，把资源做了整合，包括新闻、百科等等。</p>
+<ul>
+<li>Baidu：<a target="_blank" rel="noopener" href="https://www.baidu.com/">https://www.baidu.com/</a></li>
+</ul>
+<p>同样可以搜索到不少的技术资源，然而无关的广告太多，不大推荐使用</p>
+<ul>
+<li>Yandex：<a target="_blank" rel="noopener" href="https://yandex.com/">https://yandex.com/</a></li>
+</ul>
+<p>俄罗斯版百度，在俄罗斯第二流行的搜索引擎，推荐它是因为访问速度够快，无需科学上网。比较推荐用于搜索外文内容。</p>
+<ul>
+<li>GitHub — 开发者最最最重要的网站：<a target="_blank" rel="noopener" href="https://github.com/">https://github.com</a></li>
+</ul>
+<p>这个不用多说了吧，代码托管网站，上面有很多资源，想要什么轮子，上去搜就好了。并且呢，上面有很多优秀的程序员，你可以在这里交到很多好朋友喔。</p>
+<ul>
+<li>Coding : <a target="_blank" rel="noopener" href="https://coding.net/">https://coding.net</a></li>
+</ul>
+<p>与GitHub类似，没怎么用过，可以上去看看</p>
+<ul>
+<li>Code Pen：<a target="_blank" rel="noopener" href="https://codepen.io/">https://codepen.io/</a></li>
+</ul>
+<p>免费的前端代码托管平台，相对于 GitHub，该网站能提供代码片段的实时预览功能。</p>
+<ul>
+<li>码云-国内的代码托管·协作开发平台：<a target="_blank" rel="noopener" href="https://gitee.com/">https://gitee.com/</a></li>
+</ul>
+<p>网络不好上不了GitHub的童鞋也可以常去这里看看</p>
+<ul>
+<li>Stack Overflow — 解决 bug 的社区：<a target="_blank" rel="noopener" href="https://stackoverflow.com/">https://stackoverflow.com/</a></li>
+</ul>
+<p>开发过程中遇到什么 bug，上去搜一下，只要搜索的方式对，百分之 99 的问题都能搜到答案。在这里能够与很多有经验的开发者交流，如果你是有经验的开发者，还可以来这儿帮助别人解决问题，提升个人影响力。</p>
+<ul>
+<li>CodinGame：<a target="_blank" rel="noopener" href="https://www.codingame.com/start">https://www.codingame.com/start</a></li>
+</ul>
+<p>以玩游戏的方式通过在线编程完成相应挑战。</p>
+<ul>
+<li>Coursera：<a target="_blank" rel="noopener" href="https://www.coursera.org/">https://www.coursera.org/</a></li>
+</ul>
+<p>来自全球一流大学和公司的在线课程，培养卓越技能</p>
+<ul>
+<li>Codewars：<a target="_blank" rel="noopener" href="https://www.codewars.com/">https://www.codewars.com/</a></li>
+</ul>
+<p>提供了大量由他们自己的社区提交和编辑的编程挑战，你可以像打游戏升级一样进行挑战，并提高分数和排名。</p>
+<ul>
+<li>Kaggle：<a target="_blank" rel="noopener" href="https://www.kaggle.com/">https://www.kaggle.com/</a></li>
+</ul>
+<p>是数据挖掘、机器学习在线竞赛平台，在简历上有这一经历对求职者来说是非常具有优势的。</p>
+<ul>
+<li>TopCoder：<a target="_blank" rel="noopener" href="https://www.topcoder.com/challenges/">https://www.topcoder.com/challenges/</a></li>
+</ul>
+<p>是最早的在线编程竞技平台之一，他们还会赞助竞赛，如果你写出最好的解决方案，就可以拿到奖励！2019年就有5000美金给前5名。</p>
+<ul>
+<li>Papers With Code：<a target="_blank" rel="noopener" href="https://paperswithcode.com/">https://paperswithcode.com/</a></li>
+</ul>
+<p>按照计算机的不同应用领域进行划分，收集并整理了众多开源项目，每个项目都包含着相关论文供学习参考。</p>
+<p>项目分类涵盖了计算机视觉、自然语言处理、医学、方法论、语音、游戏、机器人等多个领域。你可以通过网站提供的排序与搜索功能，快速检索到你想要进行学习的项目。</p>
+<ul>
+<li>Arxiv：<a target="_blank" rel="noopener" href="https://arxiv.org/">https://arxiv.org/</a></li>
+</ul>
+<p>是一个收集物理学、数学、计算机科学、生物学与数理经济学的论文预印本的网站。可以在上面随意浏览全球一流高校的学生、教授在上面发表的论文，进而了解一项技术的诞生过程及实现原理，真正的站在大师的肩膀上去学习。</p>
+<ul>
+<li>Reddits：<a target="_blank" rel="noopener" href="https://www.reddit.com/">https://www.reddit.com/</a></li>
+</ul>
+<p>Reddit 包含了大量关于程序的子社区，里面包括前端、后端、计算机科学、人工智能、机器学习、编程语言、开源项目等领域。</p>
+<ul>
+<li>Medium：<a target="_blank" rel="noopener" href="https://medium.com/">https://medium.com/</a></li>
+</ul>
+<p>国外优质文章网站，Medium 的整体结构非常简单，容易让用户沉下心来专注于阅读，当然流畅访问需要科学的上网方法</p>
+<ul>
+<li>OSCHINA — 开源中国：<a target="_blank" rel="noopener" href="https://www.oschina.net/">https://www.oschina.net/</a></li>
+</ul>
+<p>开源中国最值得令人一说的就是它有一个<strong>码云</strong>(中国版的GitHub)</p>
+<ul>
+<li>掘金 — 帮助开发者成长的技术社区：<a target="_blank" rel="noopener" href="https://juejin.im/">https://juejin.im</a></li>
+</ul>
+<p>现在国内优质的开发者交流学习社区，可以去看大佬们写的文章，也可以自己分享学习心的，与更多开发者交流。如果文章质量不错，会有机会被推上首页，文章的阅读量相对较高，交流的人也蛮多的。</p>
+<ul>
+<li>知乎专栏：<a target="_blank" rel="noopener" href="https://www.zhihu.com/">https://www.zhihu.com/</a></li>
+</ul>
+<p>知乎并不是一个单纯程序员社区，它是一个问答社区，但不得不说<strong>知乎的程序员是真的多</strong>！</p>
+<ul>
+<li>哔哩哔哩：<a target="_blank" rel="noopener" href="https://www.bilibili.com/">https://www.bilibili.com/</a></li>
+</ul>
+<p>这个是国内最大的二次元视频网站，但是里面各种的技术教程是真的多，称之为宝库不为过，总能发现不少惊喜</p>
+<ul>
+<li>思否(SegmentFault)：<a target="_blank" rel="noopener" href="https://segmentfault.com/">https://segmentfault.com/</a></li>
+</ul>
+<p>SegmentFalut就类似中国版的StackOverFlow</p>
+<ul>
+<li>CSDN：<a target="_blank" rel="noopener" href="https://blog.csdn.net/">https://blog.csdn.net/</a></li>
+</ul>
+<p>百度搜出来的技术文章几乎都有CSDN的，然而近年来越做越臃肿，结果鱼龙混杂，需要大家的甄别能力，体验很差。</p>
+<ul>
+<li>博客园：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/">https://www.cnblogs.com/</a></li>
+</ul>
+<p>响应速度快，博客园无论是发文章/评论响应速度都很快，体验好。SEO做得也很好。 唯一的缺点是页面风格比较老旧，不太符合一些童鞋的审美</p>
+<ul>
+<li>简书：<a target="_blank" rel="noopener" href="https://www.jianshu.com/">https://www.jianshu.com/</a></li>
+</ul>
+<p>中规中矩，“文艺范”</p>
+<ul>
+<li>慕课网：<a target="_blank" rel="noopener" href="https://www.imooc.com/">https://www.imooc.com/</a></li>
+</ul>
+<p>有极多的视频教程，以及新建立的技术社区</p>
+<ul>
+<li><p>腾讯云社区：<a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer">https://cloud.tencent.com/developer</a></p>
+</li>
+<li><p>阿里云云栖社区：<a target="_blank" rel="noopener" href="https://yq.aliyun.com/">https://yq.aliyun.com/</a></p>
+</li>
+<li><p>51CTO博客：<a target="_blank" rel="noopener" href="http://blog.51cto.com/">http://blog.51cto.com/</a></p>
+</li>
+</ul>
+<p>是中国IT及互联网领域领先的专业垂直技术媒体，凭借专业的技术与整合信息服务的能力，致力于促进IT技术领域知识传播与服务创新。</p>
+<ul>
+<li>算法学习 LintCode：<a target="_blank" rel="noopener" href="https://www.lintcode.com/">https://www.lintcode.com/</a></li>
+</ul>
+<p>算法学习网站，上去每天刷两道算法题，走遍天下都不怕。</p>
+<ul>
+<li>算法学习 LeetCode：<a target="_blank" rel="noopener" href="https://leetcode.com/">https://leetcode.com/</a></li>
+</ul>
+<p>也是算法题网站，代码届的五年高考三年模拟。这个上多了看来你是要跳槽啊。</p>
+<ul>
+<li>算法学习 LeetCode 中文站：<a target="_blank" rel="noopener" href="https://lingkou.com/">https://lingkou.com/</a></li>
+</ul>
+<p>这个是上面算法题网站的中文站点，天朝版的会员价格低廉，题目完全相同，更有中英文双语切换以及中文题解。实在是大大的良心。</p>
+<ul>
+<li>GeeksforGeeks：<a target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/">https://www.geeksforgeeks.org/</a></li>
+</ul>
+<p>有很多关于算法和数据结构的文章、，可以用来准备和复习更难得算法问题</p>
+<ul>
+<li>牛客网 — 面经和刷面试题：<a target="_blank" rel="noopener" href="https://www.nowcoder.com/">https://www.nowcoder.com</a></li>
+</ul>
+<p>各个公司的面试题和面经分享，找工作前认真刷一刷，一定会有很大收获！拿到心仪的 offer！</p>
+<ul>
+<li>Web 开发练习题：<a target="_blank" rel="noopener" href="https://www.freecodecamp.org/">https://www.freecodecamp.org/</a></li>
+</ul>
+<p>这是国外发起的一个 Web 开发学习的网站，从简单到深入，一步一步带你学习 Web 开发。就像一本练习册，并且当你完成相应的内容后，会得到相应的资格认证。</p>
+<ul>
+<li>百度前端技术学院 — 前端开发项目库：<a target="_blank" rel="noopener" href="http://ife.baidu.com/">http://ife.baidu.com</a></li>
+</ul>
+<p>学前端的看这里，百度官方推出的前端开发学习技术学院，题目从简单到困难，如果你把里面的题都做会了，找个 BAT 的前端工作不成问题的。</p>
+<ul>
+<li>程序员客栈：<a target="_blank" rel="noopener" href="https://www.proginn.com/">https://www.proginn.com/</a></li>
+</ul>
+<p>程序员客栈是领先的程序员自由工作平台。只要你有技术，不怕赚不到钱。</p>
+<ul>
+<li>v2ex：<a target="_blank" rel="noopener" href="https://www.v2ex.com/">https://www.v2ex.com/</a></li>
+</ul>
+<p>V2EX 是一个关于分享和探索的地方，上面有很多各大公司的员工，程序员。你想要的应有尽有。</p>
+<ul>
+<li>W3Cschool：<a target="_blank" rel="noopener" href="https://www.w3cschool.cn/tutorial">https://www.w3cschool.cn/tutorial</a></li>
+</ul>
+<p>在这里你可以找到建站所需的所有建设教程，从基础的HTML、CSS到进阶的JS和PHP，并且全部免费</p>
+<ul>
+<li>how2j：<a target="_blank" rel="noopener" href="https://how2j.cn/">https://how2j.cn/</a></li>
+</ul>
+<p>一个 Java 全栈开发教程网站，内容全面，简洁易懂，非常适合入门</p>
+<ul>
+<li>易百教程：<a target="_blank" rel="noopener" href="https://www.yiibai.com/">https://www.yiibai.com/</a></li>
+</ul>
+<p>内容比较全面的在线教程网站。</p>
+<ul>
+<li>码农教程：<a target="_blank" rel="noopener" href="http://www.manongjc.com/">http://www.manongjc.com/</a></li>
+</ul>
+<p>大量IT编程入门教程(JAVA, PHP, JAVASCRIPT, C, C++, HTML, CSS等)</p>
+<ul>
+<li>简单教程：<a target="_blank" rel="noopener" href="https://www.twle.cn/">https://www.twle.cn/</a></li>
+</ul>
+<p>大量IT编程入门教程(前端、移动端、Java、.net等)</p>
+<ul>
+<li>Break易站：<a target="_blank" rel="noopener" href="https://www.breakyizhan.com/">https://www.breakyizhan.com/</a></li>
+</ul>
+<p>比较多的编程教程(Java、前端、服务端部署等)</p>
+<ul>
+<li>C语言中文网：<a target="_blank" rel="noopener" href="http://c.biancheng.net/">http://c.biancheng.net/</a></li>
+</ul>
+<p>以C语言为主，也包含数据结构、C++、Linux等</p>
+<ul>
+<li>并发编程网：<a target="_blank" rel="noopener" href="http://ifeve.com/">http://ifeve.com/</a></li>
+</ul>
+<p>比较不错的技术网站，以Java为主，关注并发、NIO、JVM、框架等方面的内容</p>
+<ul>
+<li>jenkov.com：<a target="_blank" rel="noopener" href="http://jenkov.com/">http://jenkov.com/</a></li>
+</ul>
+<p>一个国外的技术网站，提供了非常不错的Java教程</p>
+<ul>
+<li>baeldung：<a target="_blank" rel="noopener" href="http://baeldung.com/">http://baeldung.com</a></li>
+</ul>
+<p>也是一个国外的技术网站，提供了非常不错的Java教程</p>
+<ul>
+<li>菜鸟教程：<a target="_blank" rel="noopener" href="https://www.runoob.com/">https://www.runoob.com/</a></li>
+</ul>
+<p>综合性的学习网站，像API一样学习的网站</p>
+<ul>
+<li>spring4all：<a target="_blank" rel="noopener" href="http://www.spring4all.com/">http://www.spring4all.com/</a></li>
+</ul>
+<p>国内Spring 及 Spring Cloud 构建微服务架构的交流社区</p>
+<ul>
+<li> CocoaChina：<a target="_blank" rel="noopener" href="http://www.cocoachina.com/">http://www.cocoachina.com/</a></li>
+</ul>
+<p>前身是全球成立最早规模最大的苹果开发中文站,现致力为所有移动开发者提供资讯服务、问答服务、代码下载、工具库及人才招聘服务</p>
+<ul>
+<li>Hacker News：<a target="_blank" rel="noopener" href="https://news.ycombinator.com/">https://news.ycombinator.com/</a></li>
+</ul>
+<p>国外优质文章网站，上面有很多高质量的技术文章，需要科学上网</p>
+<ul>
+<li>一个实用网站汇总大全：<a target="_blank" rel="noopener" href="http://www.bewindoweb.com/dwg.php">http://www.bewindoweb.com/dwg.php</a></li>
+</ul>
+<p>本次提到的一些网站都可以在这里找到</p>
+<ul>
+<li>九章算法：<a target="_blank" rel="noopener" href="https://www.jiuzhang.com/?utm_source=sc-zhihu-lm0618">https://www.jiuzhang.com/?utm_source=sc-zhihu-lm0618</a></li>
+</ul>
+<p>开设很多实用课程，非常适合求职找工作的朋友</p>
+<ul>
+<li>中国大学MOOC网：<a target="_blank" rel="noopener" href="https://www.icourse163.org/">https://www.icourse163.org/</a></li>
+</ul>
+<p>中国大学MOOC是由网易与高教社携手推出的在线教育平台，承接教育部国家精品开放课程任务，向大众提供中国知名高校的MOOC课程。在这里，每一个有意愿提升自己的人都可以免费获得更优质的高等教育。</p>
+<ul>
+<li>DeepL翻译器：<a target="_blank" rel="noopener" href="https://www.deepl.com/translator">https://www.deepl.com/translator</a></li>
+</ul>
+<p>比Google翻译好用，翻译结果接近于自然语言</p>
+<ul>
+<li>极客时间 ： <a target="_blank" rel="noopener" href="https://time.geekbang.org/">https://time.geekbang.org/</a></li>
+</ul>
+<p>极客时间是极客邦科技出品的 IT 类知识服务产品，收费</p>
+<ul>
+<li>知识星球：<a target="_blank" rel="noopener" href="https://wx.zsxq.com/">https://wx.zsxq.com/</a></li>
+</ul>
+<p>知识星球原名小密圈，是一个知识社群的APP平台，是内容创作者连接铁杆粉丝，做出品质社群，实现知识变现的工具。</p>
+<ul>
+<li> 在线学习网站：<a target="_blank" rel="noopener" href="https://www.tutorialspoint.com/">https://www.tutorialspoint.com/</a></li>
+<li>算法学习和竞赛网站：<a target="_blank" rel="noopener" href="http://codeforces.com/">http://codeforces.com/</a></li>
+<li>Linux Kernel：<a target="_blank" rel="noopener" href="https://www.kernel.org/">https://www.kernel.org/</a></li>
+<li>FCC 中文网：<a target="_blank" rel="noopener" href="https://www.freecodecamp.one/">https://www.freecodecamp.one/</a></li>
+<li>USTC 开源镜像：<a target="_blank" rel="noopener" href="http://mirrors.ustc.edu.cn/">http://mirrors.ustc.edu.cn/</a></li>
+<li>算法练习网站：<a target="_blank" rel="noopener" href="https://www.hackerrank.com/">https://www.hackerrank.com/</a></li>
+</ul>
+<h3 id="推荐给前端程序员的技术、论坛、资讯网站："><a href="#推荐给前端程序员的技术、论坛、资讯网站：" class="headerlink" title="推荐给前端程序员的技术、论坛、资讯网站："></a>推荐给前端程序员的技术、论坛、资讯网站：</h3><ol>
+<li><a target="_blank" rel="noopener" href="https://medium.freecodecamp.com/">https://medium.freecodecamp.com/</a></li>
+<li><a target="_blank" rel="noopener" href="https://css-tricks.com/">https://css-tricks.com/</a></li>
+<li><a target="_blank" rel="noopener" href="http://css-weekly.com/">http://css-weekly.com/</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.html5rocks.com/en/">https://www.html5rocks.com/en/</a></li>
+<li><a target="_blank" rel="noopener" href="https://mobilewebweekly.com/">https://mobilewebweekly.com/</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.echojs.com/">http://www.echojs.com/</a></li>
+<li><a target="_blank" rel="noopener" href="http://us5.campaign-archive1.com/u=ea228d7061e8bbfa8639666ad&amp;id=68fee2a1f3&amp;e=91389ff35f">http://us5.campaign-archive1.com/u=ea228d7061e8bbfa8639666ad&amp;id=68fee2a1f3&amp;e=91389ff35f</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.smashingmagazine.com/">https://www.smashingmagazine.com/</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.sitepoint.com/">https://www.sitepoint.com/</a></li>
+<li><a target="_blank" rel="noopener" href="http://javascriptweekly.com/">http://javascriptweekly.com/</a></li>
+<li><a target="_blank" rel="noopener" href="http://frontendfocus.co/">http://frontendfocus.co/</a></li>
+<li><a target="_blank" rel="noopener" href="https://frontendfoc.us/">https://frontendfoc.us/</a></li>
+<li><a target="_blank" rel="noopener" href="http://reactjsnewsletter.com/issues">http://reactjsnewsletter.com/issues</a></li>
+<li><a target="_blank" rel="noopener" href="http://feeds.feedburner.com/html5rocks">http://feeds.feedburner.com/html5rocks</a></li>
+</ol>
+<h3 id="推荐给前后端程序员的技术、论坛、资讯网站："><a href="#推荐给前后端程序员的技术、论坛、资讯网站：" class="headerlink" title="推荐给前后端程序员的技术、论坛、资讯网站："></a>推荐给前后端程序员的技术、论坛、资讯网站：</h3><ol>
+<li><a target="_blank" rel="noopener" href="https://hashnode.com/">https://hashnode.com/</a></li>
+<li><a target="_blank" rel="noopener" href="http://us4.campaign-archive1.com/?u=9735795484d2e4c204da82a29&amp;id=0f792acd6e&amp;e=e6bacace33">http://us4.campaign-archive1.com/?u=9735795484d2e4c204da82a29&amp;id=0f792acd6e&amp;e=e6bacace33</a></li>
+<li><a target="_blank" rel="noopener" href="http://rubyweekly.com/">http://rubyweekly.com/</a></li>
+<li><a target="_blank" rel="noopener" href="https://golangweekly.com/">https://golangweekly.com/</a></li>
+<li><a target="_blank" rel="noopener" href="https://dbweekly.com/">https://dbweekly.com/</a></li>
+<li><a target="_blank" rel="noopener" href="https://risingstack.com/">https://risingstack.com/</a></li>
+<li><a target="_blank" rel="noopener" href="http://nodeweekly.com/">http://nodeweekly.com/</a></li>
+<li><a target="_blank" rel="noopener" href="https://webopsweekly.com/">https://webopsweekly.com/</a></li>
+<li><a target="_blank" rel="noopener" href="https://postgresweekly.com/">https://postgresweekly.com/</a></li>
+<li><a target="_blank" rel="noopener" href="http://nodeweekly.com/">http://nodeweekly.com</a></li>
+</ol>
+<h3 id="WEB开发"><a href="#WEB开发" class="headerlink" title="WEB开发"></a>WEB开发</h3><ol>
+<li><a target="_blank" rel="noopener" href="https://www.igvita.com/">https://www.igvita.com</a></li>
+<li><a target="_blank" rel="noopener" href="http://nicolasgallagher.com/">http://nicolasgallagher.com</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.chenhuijing.com/">https://www.chenhuijing.com</a></li>
+<li><a target="_blank" rel="noopener" href="http://hakim.se/">http://hakim.se</a></li>
+<li><a target="_blank" rel="noopener" href="https://paulirish.com/">https://paulirish.com</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog">http://www.ruanyifeng.com/blog</a></li>
+<li><a target="_blank" rel="noopener" href="https://matt.aimonetti.net/">https://matt.aimonetti.net</a></li>
+<li><a target="_blank" rel="noopener" href="http://benediktmeurer.de/">http://benediktmeurer.de</a></li>
+<li><a target="_blank" rel="noopener" href="http://josephg.com/blog/">http://josephg.com/blog/</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.justinobeirne.com/essay/">https://www.justinobeirne.com/essay/</a></li>
+<li><a target="_blank" rel="noopener" href="http://uggedal.com/journal">http://uggedal.com/journal</a></li>
+<li><a target="_blank" rel="noopener" href="http://mezzoblue.com/">http://mezzoblue.com/</a></li>
+<li><a target="_blank" rel="noopener" href="http://jrsinclair.com/">http://jrsinclair.com</a></li>
+<li><a target="_blank" rel="noopener" href="http://notes.iissnan.com/">http://notes.iissnan.com/</a></li>
+<li><a target="_blank" rel="noopener" href="http://mrmrs.io/writing">http://mrmrs.io/writing</a></li>
+<li><a target="_blank" rel="noopener" href="http://lucasfcosta.com/">http://lucasfcosta.com/</a></li>
+<li><a target="_blank" rel="noopener" href="https://chriscoyier.net/">https://chriscoyier.net</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.mozilla.org/">https://blog.mozilla.org</a></li>
+<li><a target="_blank" rel="noopener" href="http://jakearchibald.com/">http://jakearchibald.com/</a></li>
+<li><a target="_blank" rel="noopener" href="http://trentwalton.com/">http://trentwalton.com/</a></li>
+<li><a target="_blank" rel="noopener" href="http://madebymike.com.au/">http://madebymike.com.au</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.zeldman.com/">http://www.zeldman.com</a></li>
+</ol>
+<h3 id="推荐给前安卓程序员的技术、论坛、资讯网站："><a href="#推荐给前安卓程序员的技术、论坛、资讯网站：" class="headerlink" title="推荐给前安卓程序员的技术、论坛、资讯网站："></a>推荐给前安卓程序员的技术、论坛、资讯网站：</h3><ol>
+<li><a target="_blank" rel="noopener" href="http://androidweekly.net/">http://androidweekly.net/</a></li>
+<li><a target="_blank" rel="noopener" href="http://us2.campaign-archive2.com/?u=869610fc59cf83e08b6e0635a&amp;id=6880ca6f63&amp;e=1411ee8814">http://us2.campaign-archive2.com/?u=869610fc59cf83e08b6e0635a&amp;id=6880ca6f63&amp;e=1411ee8814</a></li>
+</ol>
+<h3 id="推荐给前-iOS-程序员的技术、论坛、资讯网站："><a href="#推荐给前-iOS-程序员的技术、论坛、资讯网站：" class="headerlink" title="推荐给前 iOS 程序员的技术、论坛、资讯网站："></a>推荐给前 iOS 程序员的技术、论坛、资讯网站：</h3><ol>
+<li><a target="_blank" rel="noopener" href="https://iosdev.tools/">https://iosdev.tools/</a></li>
+<li><a target="_blank" rel="noopener" href="https://iosdevweekly.com/">https://iosdevweekly.com/</a></li>
+<li><a target="_blank" rel="noopener" href="https://littlebitesofcocoa.com/">https://littlebitesofcocoa.com/</a></li>
+<li><a target="_blank" rel="noopener" href="http://ios-goodies.com/">http://ios-goodies.com/</a></li>
+<li><a target="_blank" rel="noopener" href="http://digest.swiftweekly.com/">http://digest.swiftweekly.com/</a></li>
+</ol>
+<h3 id="人工智能"><a href="#人工智能" class="headerlink" title="人工智能"></a>人工智能</h3><ol>
+<li><a target="_blank" rel="noopener" href="http://www.swarma.net/">http://www.swarma.net/</a></li>
+<li><a target="_blank" rel="noopener" href="https://distill.pub/">https://distill.pub</a></li>
+<li>Zayd’s Blog：<a target="_blank" rel="noopener" href="http://ai.stanford.edu/~zayd">http://ai.stanford.edu/~zayd</a></li>
+<li>一些预训练模型：<a target="_blank" rel="noopener" href="https://github.com/balavenkatesh3322">https://github.com/balavenkatesh3322</a></li>
+</ol>
+<h3 id="VR"><a href="#VR" class="headerlink" title="VR"></a>VR</h3><ol>
+<li>Mozilla VR Blog：<a target="_blank" rel="noopener" href="https://blog.mozvr.com/">https://blog.mozvr.com</a></li>
+<li>TojiCode：<a target="_blank" rel="noopener" href="http://blog.tojicode.com/">http://blog.tojicode.com</a></li>
+</ol>
+<h3 id="Official"><a href="#Official" class="headerlink" title="Official"></a>Official</h3><ol>
+<li><a target="_blank" rel="noopener" href="https://github.com/blog">https://github.com/blog</a></li>
+<li>Facebook Code：<a target="_blank" rel="noopener" href="https://code.facebook.com/">https://code.facebook.com</a></li>
+<li>Amazon Developer Blogs：<a target="_blank" rel="noopener" href="https://developer.amazon.com/">https://developer.amazon.com</a></li>
+<li>Google Developers Blog：<a target="_blank" rel="noopener" href="http://developers.googleblog.com/">http://developers.googleblog.com</a></li>
+<li><a target="_blank" rel="noopener" href="http://blog.atom.io/">http://blog.atom.io</a></li>
+<li>GitHub Engineering：<a target="_blank" rel="noopener" href="https://githubengineering.com/">https://githubengineering.com</a></li>
+<li>Dropbox Tech Blog：<a target="_blank" rel="noopener" href="https://dropboxtechblog.wordpress.com/">https://dropboxtechblog.wordpress.com</a></li>
+<li>Increment：<a target="_blank" rel="noopener" href="https://increment.com/">https://increment.com</a></li>
+<li>Uber Engineering Blog：<a target="_blank" rel="noopener" href="https://eng.uber.com/">https://eng.uber.com</a></li>
+<li>Docker Blog：<a target="_blank" rel="noopener" href="https://blog.docker.com/">https://blog.docker.com</a></li>
+<li>The npm Blog：<a target="_blank" rel="noopener" href="http://blog.npmjs.org/">http://blog.npmjs.org</a></li>
+</ol>
+<h3 id="CTF靶场（安全相关）"><a href="#CTF靶场（安全相关）" class="headerlink" title="CTF靶场（安全相关）"></a>CTF靶场（安全相关）</h3><h4 id="本地靶场"><a href="#本地靶场" class="headerlink" title="本地靶场"></a>本地靶场</h4><ul>
+<li>SQLi: <a target="_blank" rel="noopener" href="https://github.com/Audi-1/sqli-labs">https://github.com/Audi-1/sqli-labs</a></li>
+<li>DVWA: <a target="_blank" rel="noopener" href="https://github.com/ethicalhack3r/DVWA">https://github.com/ethicalhack3r/DVWA</a></li>
+<li>metsploitable3: <a target="_blank" rel="noopener" href="https://github.com/rapid7/metasploitable3/">https://github.com/rapid7/metasploitable3/</a></li>
+<li>Webgoat: <a target="_blank" rel="noopener" href="https://github.com/WebGoat/WebGoat">https://github.com/WebGoat/WebGoat</a></li>
+</ul>
+<h4 id="国内-CTF"><a href="#国内-CTF" class="headerlink" title="国内 CTF"></a>国内 CTF</h4><ul>
+<li>实验吧: <a target="_blank" rel="noopener" href="http://www.shiyanbar.com/">http://www.shiyanbar.com</a></li>
+<li>XCTF 实训平台: <a target="_blank" rel="noopener" href="http://oj.xctf.org.cn/">http://oj.xctf.org.cn</a></li>
+<li>安恒周周练： <a target="_blank" rel="noopener" href="https://www.linkedbyx.com/home">https://www.linkedbyx.com/home</a></li>
+<li>XSS专练： <a target="_blank" rel="noopener" href="https://xss.haozi.me/tools/xss-encode/">https://xss.haozi.me/tools/xss-encode/</a></li>
+<li>BugkuCTF: <a target="_blank" rel="noopener" href="https://ctf.bugku.com/">https://ctf.bugku.com/</a></li>
+<li>还有看雪，个人觉得相当棒的一个站</li>
+</ul>
+<h4 id="国外-CTF"><a href="#国外-CTF" class="headerlink" title="国外 CTF"></a>国外 CTF</h4><ul>
+<li>Root-me: <a target="_blank" rel="noopener" href="https://root-me.org/">https://root-me.org</a></li>
+<li>CTF365: <a target="_blank" rel="noopener" href="https://ctf365.com/">https://ctf365.com/</a><h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3></li>
+</ul>
+<ol>
+<li>Zhao Li：<a target="_blank" rel="noopener" href="https://livc.io/">https://livc.io</a></li>
+<li><a target="_blank" rel="noopener" href="http://ignorethecode.net/">http://ignorethecode.net</a></li>
+<li><a target="_blank" rel="noopener" href="http://ignorethecode.net/">http://ignorethecode.net</a></li>
+<li><a target="_blank" rel="noopener" href="http://idlewords.com/">http://idlewords.com</a></li>
+<li><a target="_blank" rel="noopener" href="http://matt-welsh.blogspot.com/">http://matt-welsh.blogspot.com</a></li>
+<li><a target="_blank" rel="noopener" href="http://bravenewgeek.com/">http://bravenewgeek.com</a></li>
+<li><a target="_blank" rel="noopener" href="http://blog.pmarca.com/">http://blog.pmarca.com</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.ribbonfarm.com/">https://www.ribbonfarm.com</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.gatesnotes.com/">https://www.gatesnotes.com</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.codinghorror.com/">https://blog.codinghorror.com</a></li>
+<li>蓝鲸的网站分析笔记：<a target="_blank" rel="noopener" href="http://bluewhale.cc/">http://bluewhale.cc</a></li>
+<li><a target="_blank" rel="noopener" href="http://thenewcode.com/">http://thenewcode.com</a></li>
+<li><a target="_blank" rel="noopener" href="https://tympanus.net/codrops">https://tympanus.net/codrops</a></li>
+<li><a target="_blank" rel="noopener" href="https://calendar.perfplanet.com/">https://calendar.perfplanet.com</a></li>
+<li><a target="_blank" rel="noopener" href="https://haseebq.com/">https://haseebq.com/</a></li>
+<li>Datadog- <a target="_blank" rel="noopener" href="https://www.datadoghq.com/">https://www.datadoghq.com/</a><br>DataDog是一家专注于数字性能监控的厂商，产品范围包括应用性能监控、基础设施监控、组件监控及日志监控等，产品的形态是SAAS交付。</li>
+</ol>
+<h3 id="一些好用的笔记系统"><a href="#一些好用的笔记系统" class="headerlink" title="一些好用的笔记系统"></a>一些好用的笔记系统</h3><h4 id="本地"><a href="#本地" class="headerlink" title="本地"></a>本地</h4><ol>
+<li>Obsidian：<a target="_blank" rel="noopener" href="https://obsidian.md/">https://obsidian.md/</a></li>
+<li>Typora：<a target="_blank" rel="noopener" href="https://typora.io/">https://typora.io/</a></li>
+<li>Visio</li>
+</ol>
+<h4 id="云同步"><a href="#云同步" class="headerlink" title="云同步"></a>云同步</h4><ol>
+<li>One_note：<a target="_blank" rel="noopener" href="https://www.onenote.com/">https://www.onenote.com</a></li>
+<li>有道云笔记：<a target="_blank" rel="noopener" href="http://note.youdao.com/">http://note.youdao.com/</a></li>
+<li>Notion：<a target="_blank" rel="noopener" href="https://www.notion.so/">https://www.notion.so/</a></li>
+<li>语雀：<a target="_blank" rel="noopener" href="https://www.yuque.com/">https://www.yuque.com/</a> </li>
+<li>xmind：<a target="_blank" rel="noopener" href="https://www.xmind.cn/">https://www.xmind.cn/</a></li>
+<li>MindMaster：<a target="_blank" rel="noopener" href="https://www.edrawsoft.cn/mindmaster/ad.html?channel=baidu">https://www.edrawsoft.cn/mindmaster/ad.html?channel=baidu</a></li>
+<li>石墨文档：<a target="_blank" rel="noopener" href="https://shimo.im/">https://shimo.im/</a></li>
+</ol>
 
-<p>根据这个特点可以临时保存一些数据，之后用到依次再弹出来，常用于 DFS 深度搜索
-    
-    <a class="article-more-a" href="/2019/07/15/%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/#more">more >></a>
-    
     
 
     
@@ -277,11 +671,33 @@
   <div class="article-info article-info-index">
     
     
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">学习资源</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
     
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/资料文献//" class="article-tag-list-link color5">资料文献</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2019/07/15/%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/">展开全文 >></a>
+      <a class="article-more-a" href="/2020/07/12/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BF%85%E5%A4%87%E7%9A%84%E8%87%AA%E5%AD%A6%E8%B5%84%E6%BA%90/">展开全文 >></a>
     </p>
     
 
@@ -399,6 +815,8 @@
       
     
       
+      
+      
     
       
       
@@ -410,13 +828,15 @@
     
     
       
-      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">常看的</a></li>
+      
         
       
-      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -435,6 +855,10 @@
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">学习资源</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -479,6 +903,64 @@
     	</section>
     
 
+    
+    	<section class="tools-section tools-section-friends" q-show="friends">
+  		
+        <ul class="search-ul">
+          
+            <li class="search-li">
+              <a href="https://github.com" target="_blank" 
+                class="search-title" >
+                
+                  <i class="icon-link icon"></i>
+                
+                GitHub
+              </a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://gitee.com" target="_blank" 
+                class="search-title" >
+                
+                  <i class="icon-link icon"></i>
+                
+                码云
+              </a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://www.jianshu.com" target="_blank" 
+                class="search-title" >
+                
+                  <i class="icon-link icon"></i>
+                
+                简书
+              </a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://blog.csdn.net" target="_blank" 
+                class="search-title" >
+                
+                  <i class="icon-link icon"></i>
+                
+                CSDN
+              </a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://www.cnblogs.com" target="_blank" 
+                class="search-title" >
+                
+                  <i class="icon-link icon"></i>
+                
+                博客园
+              </a>
+            </li>
+          
+        </ul>
+  		
+    	</section>
     
 
     
@@ -569,15 +1051,71 @@
   document.body.addEventListener('input', POWERMODE);
 </script>
 
-  <!--彩带1.点击自动替换彩带-->
-
-  <!-- <script src="https://g.joyinshare.com/hc/ribbon.min.js" type="text/javascript"></script> -->
-  <script type="text/javascript" src="/js/ribbon.js"></script>
-
+  
   
   <!-- <script async type="text/javascript" size="90" alpha="0.2" zIndex="0" src="/plugins/ribbon.js/ribbon.min.js"></script> -->
   
   
+    <script type="text/javascript" src="/plugins/live2d-widget.js/L2Dwidget.min.js"></script>
+<script type="text/javascript">
+  /**
+   * 完整配置请参考：https://l2dwidget.js.org/docs/class/src/index.js~L2Dwidget.html#instance-method-init
+   */
+  var pluginModelPath = "assets/", // 模型的文件路径，无需更改
+    pluginRootPath = "/live2d_models/"; // 插件的路径，无需更改
+  //特定的模型json文件名称
+  var modelPathJson = {
+    "epsilon2_1": "Epsilon2.1",
+    "gf": "Gantzert_Felixander",
+    "haru/01": "haru01",
+    "haru/02": "haru02",
+    "nietzsche": "nietzche"
+  }
+
+  
+    var modelName = "hijiki";
+  
+
+  var modelJsonPath = "";
+  if (modelPathJson[modelName]) {
+    modelJsonPath = pluginRootPath + modelName + "/" + pluginModelPath + modelPathJson[modelName] +
+      ".model.json";
+  } else {
+    modelJsonPath = pluginRootPath + modelName + "/" + pluginModelPath + modelName + ".model.json";
+  }
+  L2Dwidget.init({
+    model: {
+      jsonPath: modelJsonPath
+    },
+    display: {
+       position: "right", 
+       width: 145, 
+       height: 315, 
+       hOffset: 10, 
+      
+    },
+    mobile: {
+       show: false, 
+       scale: 0.6 
+    },
+    react: {
+       opacity: 0.8 
+    }
+  })
+
+</script>
+
+  
+  
+  <script type="text/javascript" src="/lib/snow.js"></script>
+  <script type="text/javascript" src="/lib/jquery-2.1.4.min.js"></script>
+  <script>
+    snow.down();
+    $(window).resize(function() {
+      $("canvas").css("z-index","500").remove();
+      snow.down();
+    });
+  </script>
   
 </body>
 
