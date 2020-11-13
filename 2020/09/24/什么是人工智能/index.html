@@ -6,25 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://maguscloud.ink">
-  <title>L1 Administrivia Introduction Analysis of Algorithms, Insertion Sort, Mergesort | Magus的小屋</title>
+  <title>什么是深度学习？ | Magus的小屋</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="Basic NotionAnalysis of Algorithm The analysis of algorithm is the theoretical study of computer program performance and resource usage.And a particular focus on performance.">
+  <meta name="description" content="转自：知乎李沐，附人工智能简史导图">
 <meta property="og:type" content="article">
-<meta property="og:title" content="L1 Administrivia Introduction Analysis of Algorithms, Insertion Sort, Mergesort">
-<meta property="og:url" content="http://maguscloud.ink/2020/05/20/L1%20Administrivia%20Introduction%20Analysis%20of%20Algorithms,%20Insertion%20Sort,%20Mergesort/index.html">
+<meta property="og:title" content="什么是深度学习？">
+<meta property="og:url" content="http://maguscloud.ink/2020/09/24/%E4%BB%80%E4%B9%88%E6%98%AF%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/index.html">
 <meta property="og:site_name" content="Magus的小屋">
-<meta property="og:description" content="Basic NotionAnalysis of Algorithm The analysis of algorithm is the theoretical study of computer program performance and resource usage.And a particular focus on performance.">
+<meta property="og:description" content="转自：知乎李沐，附人工智能简史导图">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/21069550-53c7378a1af26e8e.png?imageMogr2/auto-orient/strip%7CimageView2/2/format/webp">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/21069550-f9f42dce325bdef3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="article:published_time" content="2020-05-20T13:01:40.000Z">
-<meta property="article:modified_time" content="2020-11-04T20:01:06.934Z">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201114053043.png">
+<meta property="article:published_time" content="2020-09-24T00:48:39.000Z">
+<meta property="article:modified_time" content="2020-11-13T21:32:20.472Z">
 <meta property="article:author" content="Magus">
-<meta property="article:tag" content="6.046J">
+<meta property="article:tag" content="人工智能">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/21069550-53c7378a1af26e8e.png?imageMogr2/auto-orient/strip%7CimageView2/2/format/webp">
+<meta name="twitter:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201114053043.png">
   
     <link rel="alternative" href="/atom.xml" title="Magus的小屋" type="application/atom+xml">
   
@@ -235,7 +234,7 @@
           </div>
           <div id="js-content" class="content-ll">
             
-    <article id="post-L1 Administrivia Introduction Analysis of Algorithms, Insertion Sort, Mergesort" class="article article-type-post " itemscope itemprop="blogPost">
+    <article id="post-什么是人工智能" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -243,7 +242,7 @@
   
   
     <h1 class="article-title" itemprop="name">
-      L1 Administrivia Introduction Analysis of Algorithms, Insertion Sort, Mergesort
+      什么是深度学习？
     </h1>
   
 
@@ -255,8 +254,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2020/05/20/L1%20Administrivia%20Introduction%20Analysis%20of%20Algorithms,%20Insertion%20Sort,%20Mergesort/" class="archive-article-date">
-        <time datetime="2020-05-20T13:01:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-20</time>
+<a href="/2020/09/24/%E4%BB%80%E4%B9%88%E6%98%AF%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="archive-article-date">
+        <time datetime="2020-09-24T00:48:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-24</time>
 </a>
 
   
@@ -269,7 +268,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">979字</span>
+      <span class="post-count">2.7k字</span>
     </span>
   </span>
 
@@ -278,7 +277,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">6分</span>
+      <span class="post-count">8分</span>
     </span>
   </span>
 </div>
@@ -292,129 +291,48 @@
         
     
     
-    <h1 id="Basic-Notion"><a href="#Basic-Notion" class="headerlink" title="Basic Notion"></a>Basic Notion</h1><h2 id="Analysis-of-Algorithm"><a href="#Analysis-of-Algorithm" class="headerlink" title="Analysis of Algorithm"></a>Analysis of Algorithm</h2><blockquote>
-<p>The analysis of algorithm is the theoretical study of computer program performance and resource usage.And a particular focus on <em>performance</em>.<a id="more"></a></p>
-</blockquote>
-<h2 id="What’s-more-important-than-performance"><a href="#What’s-more-important-than-performance" class="headerlink" title="What’s more important than performance??"></a>What’s more important than performance??</h2><ul>
-<li>Correctness</li>
-<li>Simplicity can be.</li>
-<li>Maintainabiity,often much more important than performance.</li>
-<li>There are some costs that are involved when programming like programmer time.</li>
-<li>Stability.Robustness of the software.</li>
-<li>Security.That’s actually been more in the 2000,security has been far more than important often than performace.</li>
-<li>User-friendliness.If you look at the number of cycles of computers,that went into user -friendlness in the ‘90s,it grew from almost nothing to where it’s now the  vast part of the computation goes into user-friendly.<br>……</li>
-</ul>
-<h2 id="Why-study-algorithm-and-performance"><a href="#Why-study-algorithm-and-performance" class="headerlink" title="Why study algorithm and performance??"></a>Why study algorithm and performance??</h2><ul>
-<li>One is that often performance measure the line between the feasible and the infeasible.</li>
-</ul>
+    <p>转自：知乎<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://zhuanlan.zhihu.com/p/23781756">李沐</a>，附人工智能简史导图<a id="more"></a></p>
 <blockquote>
-<p>For example,when there are real-time requirements,if it’s not ast enough,It’s simply not functional.Or ,if it uses too much memory it’s simply not going to work for you.<br>And ,as a consequence,what you find is algorithms are on the cutting edge of entrepreneurship.<br>If you are talking about doing stuff that nobody has done before,one of the reasons often that they haven’t done it,is because it’s too time-consumin.Things don’t scale and so forth.<br>So,that’s one reason,is<em>the feasible versus infeasible</em>.</p>
+<p>所谓炼丹，就是将大量灵材使用丹炉将其凝炼成丹。练成的灵丹蕴含灵材的大部分特性，方便携带，容易吸收。高级仙丹在炼制中更是能吸收天地灵气从而引发天地异象。</p>
 </blockquote>
+<p>深度学习的模型训练就是炼丹。把精选原始数据，按照神经网络的规定法则通过计算框架提炼，从而得到一个远小于数据数倍的模型。一个好的模型不仅能抓取数据中的模式，更是能提取更加一般化规则从而可以用来预测新的数据。</p>
+<p>虽然有人会指出机器学习的模型训练也是一个类似的过程，但深度学习丹师对此是不屑的，他们认为训练“浅”模型的人最多算是老中医。因为经过了多年探索，传统机器学习模型已经解析得比较透彻，有着完整的一套理论，原材料种类趋向于固定，药方相对简单，对药罐要求也不高。</p>
+<p>但深度学习更加神奇。灵材各式各样，可以自由组合。单方也是千奇百怪，比中药方复杂数百倍。对丹炉要求苛刻，而炼制手法更是各种出其不意。整个一套流程并没有太多理论可依循，主要是靠炼丹者对天地灵气和规则的感悟。</p>
+<p>随着一颗一颗各式灵丹的练出，整个修仙界已经为此疯狂。本文简要的介绍深度学习炼丹的方方面面，并对丹界新人的修仙之路提供几点微小的建议。</p>
+<h2 id="炼丹简史"><a href="#炼丹简史" class="headerlink" title="炼丹简史"></a>炼丹简史</h2><p>炼丹这一门在修真界存在已久。上次辉煌发生在上世纪80，90年代。笔者本科导师曾回忆，他参加过一次鼎盛时期的炼丹大会，场地在海边一字排开，连绵几百米。那次会有数万人参加。但现在连名字大家都不怎么记得了。</p>
+<p>炼丹门的上一次衰退有多个原因。一个是kernel派的入侵，他们凭着一招无穷升维打得炼丹门措手不急。一方面上手容易，修炼不需要感受天地元气，另一方面又有一套从史前数学界偷来的泛函心法，老少皆宜。接踵而来的都是统计学习流，凸优化流，图模型流，他们凭着从数学界那里搬来的各式外门功夫迅速占领了修真界。</p>
+<p>炼丹门因为入门困难，操作复杂，于是人员凋落，门内坚守最后的几大长老纷纷躲在极寒之地加拿大过冬。那段时期大家只要一听到“炼丹”纷纷脸色一变绕道而行。</p>
+<p>但数年前，炼丹门大长老的得意弟子凭借一张AlexNet丹方在修仙界大擂台Imagenet竞赛上一举夺魁。随后炼丹界突破不断，全民炼丹拉开了帷幕。</p>
+<p>炼丹门的复苏离不开方方面面的改进。下面列举主要的几个。</p>
+<h2 id="灵材"><a href="#灵材" class="headerlink" title="灵材"></a>灵材</h2><p>整个修真界都是围绕着灵材展开，这是修仙最基本素材。一份炼丹灵材通常不止有多类灵材，例如MNIST有10类，ImageNet则有上千类。每类中通常有数个同类但各式属性稍有不同的个体。高端的丹药可能需要多种差异颇大的灵材，例如混合灵草和妖兽。</p>
+<p>判断一份灵材的好快通常可以通过种类的多样性和数量来衡量。种类越多，练成灵丹的效用就越广。种类个体越多，灵丹对此对其灵性吸收就越好。一份上好的灵材是炼丹成功的必备。</p>
+<p>目前修真界流程的各样灵材，例如历史悠久的MNIST和近些年颇受关注的ImageNet。丹师通常可以免费或者花费很小代价获取这些灵材。</p>
+<p>但炼制独树一格的丹药通常需要有独一无二的灵材。有钱世家会花钱收集此类灵材，或者自家种植然后请人打理。但修真仙门通常更重视内功心法，或者觉得亲自动手也是一种锻炼，于是一般要求自己弟子动手准备灵材。主要从事这内工作的通常叫药童。很多丹师是从药童做起。</p>
+<h2 id="丹方"><a href="#丹方" class="headerlink" title="丹方"></a>丹方</h2><p>丹方里最重要的是灵阵。灵阵控制如何抽取和凝结灵材中的灵性。灵阵中有若干节点，然后通过回路连接这些节点。灵材沿着回路在每个节点处进行一步一步的提纯。</p>
+<p>根据灵材的不同，灵阵也会不一样。例如卷积类灵阵适合具有空间属性的灵材，而Recurrent类则适合炼制时间类属性灵材。如何设计灵阵并没有太多套路可以依循，这个主要是取决于丹师对灵材和天地规则的感悟。对于后者，一个常用的领悟对象是灵长类动物的大脑。不过即使修仙界孜孜不倦的研究了半个世纪，但进展并不是很迅速。</p>
+<h2 id="真火"><a href="#真火" class="headerlink" title="真火"></a>真火</h2><p>凝丹需要借助真火。真火的强度决定了炼制的速度，所以丹师通常渴望最好的真火。真火的生产被几大世家控制，其中目前最为流行的是被称之为“核弹厂”的世家。他家真火专门为炼丹定制，数倍强劲于普通修真真火。所以每年的升级都导致丹师蜂拥而至一抢而空。其世家行情上周就长了三成。其他老牌真火世家也最近开始考虑生成炼丹专用真火。</p>
+<p>口袋富余的丹师会选择自己购入真火，虽然购买和维护费用均不低。更多丹师是借用世家或者仙门内公共的真火，由此也经常引发争夺以至于大打出手。</p>
+<p>修真界也有专门出售真火的组织，丹师花费一定灵石可以租到各式真火。目前最大一家AWS提供核弹厂真火，行情也颇为火爆。另外几家也已经或者马上会提供类似的服务。</p>
+<h2 id="丹炉"><a href="#丹炉" class="headerlink" title="丹炉"></a>丹炉</h2><p>很少有丹师会直接使用真火，他们通常使用丹炉来简化炼制过程。丹炉形态不一，但大致流程都是先将炉放置真火上，然后加入单方和灵材。丹炉会自动借用真火之力将灵材不断牵引在灵阵中游走进而凝丹。</p>
+<p>一个好的丹炉使用简单，能够装入大量灵材，而且能有效的使用真火。通常一股真火力量有限，需要集合多股真火之力。更高端的可以使用多个丹炉同时开火炼制一枚灵丹。</p>
+<p>目前市面上流行数个丹炉。根据某知名造丹炉师的排名，第一的是第一世家的当家丹炉，使用说明详细，一推出后广受欢迎。排第二的是数年前贾教主在出山门前闭关打造，稳定可靠。笔者也参与一款丹炉的炼制过程，目前徘徊在第三第四。特点是新潮，高效，可定制化高，而且是集合顶尖仙门和世家数十丹师打造。笔者自认为此丹炉未来发展空间宽阔，推荐大家关注。</p>
+<h2 id="炼制"><a href="#炼制" class="headerlink" title="炼制"></a>炼制</h2><p>在具体的炼制过程中，丹炉每次将一些灵材放入灵阵，利用真火让其在灵阵中游走一个来回，将提炼出来的丝缕灵气置于灵丹中。这个过程可能会持续数百万次直至成丹。</p>
+<p>虽然经过多年发展，丹炉自动可以完成主要炼制过程，但也经常需要丹师参与。丹师可以控制每次运转的时候将多少灵气压入灵丹。比例太少会导致成丹过慢，比例太大可能会导致爆丹，极端情况下甚至会爆炉。所以炼制过程中丹师一般守在丹炉边，根据当时状态做仔细调节。但即使丹成，也有可能质量不佳，这时候可能需要对灵材和丹方做一些改进，然后重新来过。</p>
+<p>根据灵材多少，丹方的复杂度，和真火丹炉的质量，这个过程可能持续数小时到数天不等。单师在不断的炼制过程获取经验从而成长。</p>
+<h2 id="修炼之路"><a href="#修炼之路" class="headerlink" title="修炼之路"></a>修炼之路</h2><p>丹师的修炼之路需要大量的资源，特别是跟主修内功流的诸多流派相比。但同时丹师回报率高，因为一枚成色十足仙丹通常可以卖到很好的价格。各个世家对于优秀的丹师也是欢迎至极，待遇颇丰。</p>
+<p>笔者根据自己的观察和经验，试图总结一下常见的修炼过程：</p>
+<p>初级：熟悉常见灵材和丹方，上手一款丹炉炼制入门灵丹。经过大量练习初级丹师可以晋级中级。</p>
+<p>中级：能够炼制市面上顶级灵丹。通常需要有效掌握丹炉的高级用法，拥有或能借来高级真火。熟悉炼制过程各个细节，能根据现场状况做一些调节来控制成丹质量。对于一份新灵材也能够炼制出成色不错的灵丹。参加炼丹大会并得到不错的名次。中级丹师可以满足大部分世家的要求，从而衣食无愁。</p>
 <ul>
-<li>algorithms give you a language for talking about program behavior</li>
+<li>高级。高级丹师可以主持一方，而且至少在某一方向上修炼到极致：</li>
+<li>灵材：能够大规模培育高质量灵材，或者发掘新的未知灵材</li>
+<li>丹方：能够感应灵材和天地法则极大改进现有丹方，或者发明新丹方</li>
+<li>丹炉：熟悉丹炉细节，能够有效改进丹炉，甚至是打造更好的丹炉</li>
+<li>炼制：能够调集大量灵材和真火，并在短时间内炼制高质量灵丹</li>
 </ul>
-<blockquote>
-<p>Algorithmst turns out to be a language that has been pervasive through computer science,is that the theoretical language is what gets adopted by all the practitioners，because it’s a clean way of thinking about things.<br>!! A good way to think about performance,and the reason it’s on the bottom of the heap,performance is like money,it’s the univesal thing that you quantify.</p>
-</blockquote>
-<ul>
-<li>The lase reason we study algorithm performance is it’s tons of fun.</li>
-</ul>
-<blockquote>
-<p>Speed is always fun,right?</p>
-</blockquote>
-<hr>
-<h1 id="sorting"><a href="#sorting" class="headerlink" title="sorting"></a>sorting</h1><p>We’are going to start out with a very simple problem.It’s one of the oldest problems that has been studies in algorithms,sorting.Sorting contains many algorithmsic techniques.</p>
-<blockquote>
-<ol>
-<li>Input sequence &lt;$a_1,a_2,…,a_n$&gt; of numbers, and output permutation &lt;$a^,_1, a^,_2,…, a^,_2$&gt;,such that $a^,_1\leq a^,_2\leq…\leq a^,_2$(monotonically increasing in size)</li>
-</ol>
-</blockquote>
-<h2 id="insertion-sort-using-pseudocode"><a href="#insertion-sort-using-pseudocode" class="headerlink" title="insertion sort(using pseudocode)"></a>insertion sort(using pseudocode)</h2><p>INSERTION-SORT</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">for j =  2 to A.length</span><br><span class="line">	key = A[j]</span><br><span class="line">	//Insert A[j] into the sorted sequence A[1..j-1]</span><br><span class="line">	i = j - 1</span><br><span class="line">	while i &gt;0 and A[i]&gt;key</span><br><span class="line">		A[i+1] = A[i]</span><br><span class="line">		i=i-1</span><br><span class="line">	A[i+1] = key	</span><br></pre></td></tr></table></figure>
-<p>HOW:</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/21069550-53c7378a1af26e8e.png?imageMogr2/auto-orient/strip%7CimageView2/2/format/webp" alt="img"></p>
-<p>Ex. &lt;8、2、4、9、3、6&gt;<br>start<br>8、<code>2</code>、4、9、3、6<br>2、8、<code>4</code>、9、3、6<br>2、4、8、<code>9</code>、3、6<br>2、4、8、9、<code>3</code>、6<br>2、3、4、8、9、<code>6</code><br>2、3、4、6、8、9<br>done</p>
-<h3 id="Running-Time"><a href="#Running-Time" class="headerlink" title="Running-Time"></a>Running-Time</h3><ul>
-<li>Depend on input (eg.  already sorted)</li>
-<li>Depend on input size(6 elements vs. $6X10^9$elements)<ul>
-<li>parameterize things in the input size</li>
-</ul>
-</li>
-<li>want upper bounds<ul>
-<li>guarantee to user</li>
-</ul>
-</li>
-</ul>
-<h3 id="Kinds-of-analysis"><a href="#Kinds-of-analysis" class="headerlink" title="Kinds of analysis"></a>Kinds of analysis</h3><ul>
-<li>Worst-case (usually)<br>$T(n)$=max time on any input of size n.</li>
-</ul>
-<blockquote>
-<p>max time:we are looking for the worst case of all inputs,cause that’s the way we’re going to be able to make a guarantee,it always does something rather than just sometimes does something.<br>$T(n)$ in some sense is a relation ,not a function ,if we didn’t have maximum.Because the time on an input of size n depends on which input size n.But by putting the maximum at it,it turns that relation into a function. </p>
-</blockquote>
-<ul>
-<li>Average-case (sometimes)<br>$T(n)$=expected time over all inputs of size n.</li>
-</ul>
-<blockquote>
-<p>expected time: taking weighted average<br>(need assumption of the statistical distribution of inputs.)</p>
-</blockquote>
-<ul>
-<li>Best-case (bogus)</li>
-</ul>
-<blockquote>
-<p>you can cheat with a slow algorithm,that works fast on some input,it doesn’t really do much for you.</p>
-</blockquote>
-<h3 id="What-is-insertion-sort-worst-case-time"><a href="#What-is-insertion-sort-worst-case-time" class="headerlink" title="What is insertion-sort worst-case time?"></a>What is insertion-sort worst-case time?</h3><p> it sort of depends on the computer you’re running on.<br> when we compare algorithns;<br>    - relative speed.(different algorithms on same machine)<br>    - absolute speed.(same algorithm on different machine)</p>
-<h3 id="Big-idea-of-algorithm"><a href="#Big-idea-of-algorithm" class="headerlink" title="Big idea of algorithm"></a>Big idea of algorithm</h3><p><em>asymptotic analysis</em>:</p>
-<ol>
-<li>Ignore machine-dependent constants</li>
-<li>Look at growth of $T(n)$ as n –&gt; &infin;.</li>
-</ol>
-<h3 id="Asymptotic-notation"><a href="#Asymptotic-notation" class="headerlink" title="Asymptotic notation"></a>Asymptotic notation</h3><ul>
-<li>&theta; notation:Drop low order terms and ignore leading constants.<br>It’s a definition in terms of sets of functions.</li>
-</ul>
-<blockquote>
-<p>&theta; is a weak notation.A strong notation like Leibniz notation from calculus,where the chain rule is just canceling two things.And Lebniz notation just expresses that so directly you can mainipulate.<br>&theta; notation is not like that .And it’s more of a descriptive notation than it is a mainipulative notation.  </p>
-</blockquote>
-<p>EX: $3n^3+90n^2-5n+6046$<br>done:$3n^3+90n^2-5n+6046$=&theta; $(n^3)$</p>
-<blockquote>
-<p>As n –&gt; &infin; ,&theta;$(n^2)$ algorithm always beats a &theta;$(n^3)$ algorithm.</p>
-</blockquote>
-<h3 id="Insertion-Sort-analysis"><a href="#Insertion-Sort-analysis" class="headerlink" title="Insertion-Sort analysis"></a>Insertion-Sort analysis</h3><blockquote>
-<p>worst-case :input reverse sorted<br>$T(n)$=$\sum^{n}_{j=2}$&theta;(j) =&theta;$(n^2)$…………(Arithmetic Series)</p>
-</blockquote>
-<h3 id="Is-insertion-sort-fast"><a href="#Is-insertion-sort-fast" class="headerlink" title="Is insertion sort fast?"></a>Is insertion sort fast?</h3><ul>
-<li>Moderately fast for small n</li>
-<li>Not at all for large n</li>
-</ul>
-<h2 id="Merge-Sort"><a href="#Merge-Sort" class="headerlink" title="Merge Sort"></a>Merge Sort</h2><table>
-<thead>
-<tr>
-<th>T(n)</th>
-<th>Merge Sort A[1…n]</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>&theta;(1) (it’s a constant)</td>
-<td>1. if n = 1,done</td>
-</tr>
-<tr>
-<td>2T(n/2) (sloppy)</td>
-<td>2. recursively sort A [1 ,..[n/2]] and A[[n/2],…n]</td>
-</tr>
-<tr>
-<td>&theta;(n)</td>
-<td>3. Merge 2 sorted lists</td>
-</tr>
-</tbody></table>
-<h3 id="Key-subroutine-Merge"><a href="#Key-subroutine-Merge" class="headerlink" title="Key subroutine -Merge"></a>Key subroutine -Merge</h3><ul>
-<li>Time = &theta;(n) on n total elements</li>
-</ul>
-<h3 id="Recurrene"><a href="#Recurrene" class="headerlink" title="Recurrene"></a>Recurrene</h3><p>$$ T(n)=\left{<br>\begin{aligned}<br>\theta(1) &amp;&amp; n= 1  &amp;&amp;  (usually.omit)\<br>2T(n/2)+\theta(n) &amp;&amp; n&gt;1  \<br>\end{aligned}<br>\right.<br>$$</p>
-<h3 id="Recurrence-Tree"><a href="#Recurrence-Tree" class="headerlink" title="Recurrence Tree"></a>Recurrence Tree</h3><p>$$T(n)= 2T(n/2)+cn…(c&gt;0)$$ </p>
-<p><img src="https://upload-images.jianshu.io/upload_images/21069550-f9f42dce325bdef3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<blockquote>
-<p>$\theta(nlgn)$ is asymptotically faster than $\theta(n_2)$<br>So，on a large enough input size,merge sort is going to beat insertion sort.</p>
-</blockquote>
+<p>但炼丹跟修真界其他流派一样，光靠正常打怪练级很难成就巅峰。丹师需要追求自己独特的机遇，道路，和体悟，并且不断最求更高。</p>
+<p>附：</p>
+<p><img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201114053043.png" alt="人工智能发展简史"></p>
 
     
 
@@ -461,7 +379,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://maguscloud.ink/2020/05/20/L1 Administrivia Introduction Analysis of Algorithms, Insertion Sort, Mergesort/" title="L1 Administrivia Introduction Analysis of Algorithms, Insertion Sort, Mergesort" target="_blank">http://maguscloud.ink/2020/05/20/L1 Administrivia Introduction Analysis of Algorithms, Insertion Sort, Mergesort/</a>
+          <a href="http://maguscloud.ink/2020/09/24/什么是人工智能/" title="什么是深度学习？" target="_blank">http://maguscloud.ink/2020/09/24/什么是人工智能/</a>
         </li>
         
         <li>
@@ -483,7 +401,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">6.046J</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">人工智能</a>
         		</li>
       		
 		</ul>
@@ -495,7 +413,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Algorithms//" class="article-tag-list-link color1">Algorithms</a>
+        			<a href="/categories/技术科普//" class="article-tag-list-link color5">技术科普</a>
         		</li>
       		
 		</ul>
@@ -550,7 +468,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://maguscloud.ink/2020/05/20/L1%20Administrivia%20Introduction%20Analysis%20of%20Algorithms,%20Insertion%20Sort,%20Mergesort/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://maguscloud.ink/2020/09/24/%E4%BB%80%E4%B9%88%E6%98%AF%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -565,18 +483,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2020/09/24/%E4%BB%80%E4%B9%88%E6%98%AF%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/11/01/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGitee%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          什么是深度学习？
+          使用Hexo和Gitee快速搭建个人博客
         
       </div>
     </a>
   
   
-    <a href="/2020/05/20/6.046J-Introduction-to-Algorithms/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">6.046J Introduction to Algorithms</div>
+    <a href="/2020/05/20/L1%20Administrivia%20Introduction%20Analysis%20of%20Algorithms,%20Insertion%20Sort,%20Mergesort/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">L1 Administrivia Introduction Analysis of Algorithms, Insertion Sort, Mergesort</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -603,7 +521,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Basic-Notion"><span class="toc-number">1.</span> <span class="toc-text">Basic Notion</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Analysis-of-Algorithm"><span class="toc-number">1.1.</span> <span class="toc-text">Analysis of Algorithm</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#What%E2%80%99s-more-important-than-performance"><span class="toc-number">1.2.</span> <span class="toc-text">What’s more important than performance??</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Why-study-algorithm-and-performance"><span class="toc-number">1.3.</span> <span class="toc-text">Why study algorithm and performance??</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#sorting"><span class="toc-number">2.</span> <span class="toc-text">sorting</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#insertion-sort-using-pseudocode"><span class="toc-number">2.1.</span> <span class="toc-text">insertion sort(using pseudocode)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Running-Time"><span class="toc-number">2.1.1.</span> <span class="toc-text">Running-Time</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Kinds-of-analysis"><span class="toc-number">2.1.2.</span> <span class="toc-text">Kinds of analysis</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What-is-insertion-sort-worst-case-time"><span class="toc-number">2.1.3.</span> <span class="toc-text">What is insertion-sort worst-case time?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Big-idea-of-algorithm"><span class="toc-number">2.1.4.</span> <span class="toc-text">Big idea of algorithm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Asymptotic-notation"><span class="toc-number">2.1.5.</span> <span class="toc-text">Asymptotic notation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Insertion-Sort-analysis"><span class="toc-number">2.1.6.</span> <span class="toc-text">Insertion-Sort analysis</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Is-insertion-sort-fast"><span class="toc-number">2.1.7.</span> <span class="toc-text">Is insertion sort fast?</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Merge-Sort"><span class="toc-number">2.2.</span> <span class="toc-text">Merge Sort</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Key-subroutine-Merge"><span class="toc-number">2.2.1.</span> <span class="toc-text">Key subroutine -Merge</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Recurrene"><span class="toc-number">2.2.2.</span> <span class="toc-text">Recurrene</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Recurrence-Tree"><span class="toc-number">2.2.3.</span> <span class="toc-text">Recurrence Tree</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%82%BC%E4%B8%B9%E7%AE%80%E5%8F%B2"><span class="toc-number">1.</span> <span class="toc-text">炼丹简史</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%81%B5%E6%9D%90"><span class="toc-number">2.</span> <span class="toc-text">灵材</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%B9%E6%96%B9"><span class="toc-number">3.</span> <span class="toc-text">丹方</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9C%9F%E7%81%AB"><span class="toc-number">4.</span> <span class="toc-text">真火</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%B9%E7%82%89"><span class="toc-number">5.</span> <span class="toc-text">丹炉</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%82%BC%E5%88%B6"><span class="toc-number">6.</span> <span class="toc-text">炼制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E7%82%BC%E4%B9%8B%E8%B7%AF"><span class="toc-number">7.</span> <span class="toc-text">修炼之路</span></a></li></ol>
                     </div>
                 </span>
             </div>
