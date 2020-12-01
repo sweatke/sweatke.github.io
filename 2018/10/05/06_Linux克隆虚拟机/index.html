@@ -6,26 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://maguscloud.ink">
-  <title>04——Linux中的VIM编辑器 | Magus的小屋</title>
+  <title>06——Linux克隆虚拟机 | Magus的小屋</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="第4章 VIM编辑器4.1. 简介VIM是Linux系统环境下的一款非常重要的文本编辑工具，我们在Linux环境下几乎所有的文本文件编辑工作都是靠它。可能你还听说过VI，嗯，VIM是VI的升级版。">
+  <meta name="description" content="第6章 克隆虚拟机6.1 克隆虚拟机①关闭要被克隆的虚拟机">
 <meta property="og:type" content="article">
-<meta property="og:title" content="04——Linux中的VIM编辑器">
-<meta property="og:url" content="http://maguscloud.ink/2018/10/05/Linux%E7%9A%84Vim%E7%BC%96%E8%BE%91%E5%99%A8/index.html">
+<meta property="og:title" content="06——Linux克隆虚拟机">
+<meta property="og:url" content="http://maguscloud.ink/2018/10/05/06_Linux%E5%85%8B%E9%9A%86%E8%99%9A%E6%8B%9F%E6%9C%BA/index.html">
 <meta property="og:site_name" content="Magus的小屋">
-<meta property="og:description" content="第4章 VIM编辑器4.1. 简介VIM是Linux系统环境下的一款非常重要的文本编辑工具，我们在Linux环境下几乎所有的文本文件编辑工作都是靠它。可能你还听说过VI，嗯，VIM是VI的升级版。">
+<meta property="og:description" content="第6章 克隆虚拟机6.1 克隆虚拟机①关闭要被克隆的虚拟机">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202031121.png">
-<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202031314.png">
-<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202034451.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202044413.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202044428.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202044514.png">
 <meta property="article:published_time" content="2018-10-05T13:19:15.000Z">
-<meta property="article:modified_time" content="2020-12-01T22:50:03.683Z">
+<meta property="article:modified_time" content="2020-12-01T22:52:39.384Z">
 <meta property="article:author" content="Magus">
 <meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202031121.png">
+<meta name="twitter:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202044413.png">
   
     <link rel="alternative" href="/atom.xml" title="Magus的小屋" type="application/atom+xml">
   
@@ -236,7 +236,7 @@
           </div>
           <div id="js-content" class="content-ll">
             
-    <article id="post-Linux的Vim编辑器" class="article article-type-post " itemscope itemprop="blogPost">
+    <article id="post-06_Linux克隆虚拟机" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -244,7 +244,7 @@
   
   
     <h1 class="article-title" itemprop="name">
-      04——Linux中的VIM编辑器
+      06——Linux克隆虚拟机
     </h1>
   
 
@@ -256,7 +256,7 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2018/10/05/Linux%E7%9A%84Vim%E7%BC%96%E8%BE%91%E5%99%A8/" class="archive-article-date">
+<a href="/2018/10/05/06_Linux%E5%85%8B%E9%9A%86%E8%99%9A%E6%8B%9F%E6%9C%BA/" class="archive-article-date">
         <time datetime="2018-10-05T13:19:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-05</time>
 </a>
 
@@ -270,7 +270,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">948字</span>
+      <span class="post-count">379字</span>
     </span>
   </span>
 
@@ -279,7 +279,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">3分</span>
+      <span class="post-count">1分</span>
     </span>
   </span>
 </div>
@@ -293,236 +293,37 @@
         
     
     
-    <h1 id="第4章-VIM编辑器"><a href="#第4章-VIM编辑器" class="headerlink" title="第4章 VIM编辑器"></a>第4章 VIM编辑器</h1><h2 id="4-1-简介"><a href="#4-1-简介" class="headerlink" title="4.1. 简介"></a>4.1. 简介</h2><p>VIM是Linux系统环境下的一款非常重要的文本编辑工具，我们在Linux环境下几乎所有的文本文件编辑工作都是靠它。可能你还听说过VI，嗯，VIM是VI的升级版。<a id="more"></a></p>
-<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202031121.png" alt="image-20201202031121803" style="zoom: 67%;" />
+    <h1 id="第6章-克隆虚拟机"><a href="#第6章-克隆虚拟机" class="headerlink" title="第6章 克隆虚拟机"></a>第6章 克隆虚拟机</h1><h2 id="6-1-克隆虚拟机"><a href="#6-1-克隆虚拟机" class="headerlink" title="6.1 克隆虚拟机"></a>6.1 克隆虚拟机</h2><p>①关闭要被克隆的虚拟机<a id="more"></a></p>
+<p>②找到克隆选项<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202044413.png" alt="image-20201202044413145"></p>
+<p>​                               </p>
+<p>③欢迎页面点击下一步</p>
+<p>④克隆虚拟机，克隆自虚拟机的当前状态后，点击下一步</p>
+<p>⑤设置创建完整克隆</p>
+<p>⑥设置克隆的虚拟机名称和存储位置</p>
+<p><img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202044428.png" alt="image-20201202044428933"></p>
+<p>⑦等待正在克隆</p>
+<p>⑧点击关闭，完成克隆</p>
+<p>当大批量克隆时，<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/83700ccccfa5">参照</a></p>
+<h2 id="6-2-克隆完成后的配置"><a href="#6-2-克隆完成后的配置" class="headerlink" title="6.2 克隆完成后的配置"></a>6.2 克隆完成后的配置</h2><p>①修改克隆后虚拟机的ip</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop101 &#x2F;]#vim &#x2F;etc&#x2F;udev&#x2F;rules.d&#x2F;70-persistent-net.rules</span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p>vi / vim是Unix / Linux上最常用的文本编辑器而且功能非常强大<br>只有命令，没有菜单  </p>
-</blockquote>
-<h2 id="4-2-VIM编辑器的三种工作模式"><a href="#4-2-VIM编辑器的三种工作模式" class="headerlink" title="4.2. VIM编辑器的三种工作模式"></a>4.2. VIM编辑器的三种工作模式</h2><p><img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202031314.png" alt="image-20201202031314730"></p>
-<h2 id="4-3-一般模式"><a href="#4-3-一般模式" class="headerlink" title="4.3. 一般模式"></a>4.3. 一般模式</h2><p>以vi打开一个档案就直接进入一般模式了（这是默认的模式）。在这个模式中， 你可以使用『上下左右』按键来移动光标，你可以使用『删除字符』或『删除整行』来处理档案内容， 也可以使用『复制、贴上』来处理你的文件数据。</p>
-<table>
-<thead>
-<tr>
-<th><strong>按键</strong></th>
-<th><strong>功能描述</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>yy</td>
-<td>复制光标当前一行</td>
-</tr>
-<tr>
-<td>y数字y</td>
-<td>复制一段（从当前行复制n行）</td>
-</tr>
-<tr>
-<td>p</td>
-<td>箭头移动到目的行粘贴</td>
-</tr>
-<tr>
-<td>u</td>
-<td>undo, 撤销上一步</td>
-</tr>
-<tr>
-<td>Ctrl  + r</td>
-<td>redo，返回到undo之前</td>
-</tr>
-<tr>
-<td>dd</td>
-<td>删除光标当前行</td>
-</tr>
-<tr>
-<td>dG</td>
-<td>删除光标所在行到末尾行的所有内容</td>
-</tr>
-<tr>
-<td>d数字d</td>
-<td>删除光标（含）后多少行</td>
-</tr>
-<tr>
-<td>D</td>
-<td>删除光标所在处到行尾的内容</td>
-</tr>
-<tr>
-<td>**:**5,7d</td>
-<td>删除指定范围的行</td>
-</tr>
-<tr>
-<td>x</td>
-<td>删除一个字母，相当于del</td>
-</tr>
-<tr>
-<td>nx</td>
-<td>删除光标所在处后的n个字符</td>
-</tr>
-<tr>
-<td>X</td>
-<td>删除一个字母，相当于Backspace</td>
-</tr>
-<tr>
-<td>yw</td>
-<td>复制一个词</td>
-</tr>
-<tr>
-<td>r</td>
-<td>替换光标所在处的字符</td>
-</tr>
-<tr>
-<td>R</td>
-<td>从光标所在处开始替换，按Esc键结束</td>
-</tr>
-<tr>
-<td>dw</td>
-<td>删除一个词</td>
-</tr>
-<tr>
-<td>shift+^</td>
-<td>移动到行头</td>
-</tr>
-<tr>
-<td>shift+$</td>
-<td>移动到行尾</td>
-</tr>
-<tr>
-<td>1+shift+g</td>
-<td>移动到页头，数字</td>
-</tr>
-<tr>
-<td>shift+g</td>
-<td>移动到页尾</td>
-</tr>
-<tr>
-<td>数字N+shift+g</td>
-<td>移动到目标行</td>
-</tr>
-<tr>
-<td>gg</td>
-<td>到文本的第一行</td>
-</tr>
-<tr>
-<td>G</td>
-<td>到文本的最后一行</td>
-</tr>
-<tr>
-<td>:n</td>
-<td>到文本的第n行</td>
-</tr>
-</tbody></table>
-<h2 id="4-4-编辑模式"><a href="#4-4-编辑模式" class="headerlink" title="4.4. 编辑模式"></a>4.4. 编辑模式</h2><p>在一般模式中可以进行删除、复制、粘贴等的动作，但是却无法编辑文件内容的！要等到你按下『i, I, o, O, a, A, r, R』等任何一个字母之后才会进入编辑模式。</p>
-<p>注意了！通常在Linux中，按下这些按键时，在画面的左下方会出现『INSERT或 REPLACE』的字样，此时才可以进行编辑。而如果要回到一般模式时， 则必须要按下『Esc』这个按键即可退出编辑模式。</p>
-<table>
-<thead>
-<tr>
-<th>按键</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><font color=red> i  </font></td>
-<td><font color=red>当前光标前  </font></td>
-</tr>
-<tr>
-<td>a</td>
-<td>当前光标后</td>
-</tr>
-<tr>
-<td><font color=red> o  </font></td>
-<td><font color=red>当前光标行的下一行  </font></td>
-</tr>
-<tr>
-<td>I</td>
-<td>光标所在行最前</td>
-</tr>
-<tr>
-<td><font color=red> A  </font></td>
-<td><font color=red>光标所在行最后  </font></td>
-</tr>
-<tr>
-<td>O</td>
-<td>当前光标行的上一行</td>
-</tr>
-<tr>
-<td>s</td>
-<td>删除当前字符并进入编辑</td>
-</tr>
-<tr>
-<td>S</td>
-<td>删除整行并进入编辑</td>
-</tr>
-</tbody></table>
-<h2 id="4-5-指令模式"><a href="#4-5-指令模式" class="headerlink" title="4.5. 指令模式"></a>4.5. 指令模式</h2><p>在一般模式当中，输入『 : / ?』3个中的任何一个按钮，就可以将光标移动到最底下那一行。</p>
-<p>在这个模式当中， 可以提供你『搜寻资料』的动作，而读取、存盘、大量取代字符、离开 vi 、显示行号等动作是在此模式中达成的！</p>
-<table>
-<thead>
-<tr>
-<th>命令</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>:w</td>
-<td>保存</td>
-</tr>
-<tr>
-<td>:q</td>
-<td>退出</td>
-</tr>
-<tr>
-<td>:!</td>
-<td>强制执行</td>
-</tr>
-<tr>
-<td>/要查找的词</td>
-<td>n 查找下一个，N 往上查找</td>
-</tr>
-<tr>
-<td>? 要查找的词</td>
-<td>n是查找上一个，N是往下查找</td>
-</tr>
-<tr>
-<td>:set nu</td>
-<td>显示行号</td>
-</tr>
-<tr>
-<td>:set nonu</td>
-<td>关闭行号</td>
-</tr>
-<tr>
-<td>:%s/str1/str2/g</td>
-<td>将str1批量替换为str2</td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>注意：</p>
-<p>①其实强制保存时，还要看是否具备权限，如果没有权限加了强制也不一定能保存进去</p>
-<p>②如果有未保存的修改则无法退出</p>
-</blockquote>
-<h2 id="常用的几个快捷键"><a href="#常用的几个快捷键" class="headerlink" title="*常用的几个快捷键"></a>*常用的几个快捷键</h2><table>
-<thead>
-<tr>
-<th>命令</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Shift+ zz  /Ctrl+z</td>
-<td>保存退出，与“:wq”作用相同</td>
-</tr>
-<tr>
-<td>v</td>
-<td>进入字符可视模式</td>
-</tr>
-<tr>
-<td>V   或 Shift + v</td>
-<td>进入行可视模式</td>
-</tr>
-<tr>
-<td>Ctrl + v</td>
-<td>进入块可视模式</td>
-</tr>
-</tbody></table>
-<h2 id="4-6-VIM键盘图"><a href="#4-6-VIM键盘图" class="headerlink" title="4.6. VIM键盘图"></a>4.6. VIM键盘图</h2><p><img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202034451.png" alt="image-20201202034451467"></p>
+<p>进入如下页面，删除eth0该行；将eth1修改为eth0，同时复制物理ip地址</p>
+<p><img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202044514.png" alt="image-20201202044514225"></p>
+<p>修改IP地址</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop101 &#x2F;]#vim &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-eth0</span><br></pre></td></tr></table></figure>
+
+<p>ifcfg-eth0文件说明:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">DEVICE&#x3D;eth0    #接口名（设备,网卡）</span><br><span class="line">BOOTPROTO&#x3D;none      </span><br><span class="line">\# IP的配置方法[none|static|bootp|dhcp]（引导时不使用协议|静态分配IP|BOOTP协议|DHCP协议） </span><br><span class="line">BROADCAST&#x3D;192.168.1.255    #广播地址    </span><br><span class="line">HWADDR&#x3D;00:0C:2x:6x:0x:xx   #MAC地址 </span><br><span class="line">IPADDR&#x3D;192.168.1.23                 #IP地址</span><br><span class="line">NETMASK&#x3D;255.255.255.0            # 网络掩码  </span><br><span class="line">NETWORK&#x3D;192.168.1.0                #网络地址 </span><br><span class="line">ONBOOT&#x3D;yes              #系统启动的时候网络接口是否有效（yes&#x2F;no）</span><br><span class="line">TYPE&#x3D;Ethernet                       #网络类型（通常是Ethemet）</span><br></pre></td></tr></table></figure>
+
+<p>（1）把复制的物理ip地址更新</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HWADDR&#x3D;00:0C:2x:6x:0x:xx  #MAC地址 </span><br></pre></td></tr></table></figure>
+
+<p>（2）修改成你想要的ip</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">IPADDR&#x3D;192.168.1.101   #IP地址</span><br></pre></td></tr></table></figure>
+
+<p>11）修改主机名称</p>
+<p>详见5.3。</p>
+<p>12）重新启动服务器</p>
 
     
 
@@ -569,7 +370,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://maguscloud.ink/2018/10/05/Linux的Vim编辑器/" title="04——Linux中的VIM编辑器" target="_blank">http://maguscloud.ink/2018/10/05/Linux的Vim编辑器/</a>
+          <a href="http://maguscloud.ink/2018/10/05/06_Linux克隆虚拟机/" title="06——Linux克隆虚拟机" target="_blank">http://maguscloud.ink/2018/10/05/06_Linux克隆虚拟机/</a>
         </li>
         
         <li>
@@ -658,7 +459,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://maguscloud.ink/2018/10/05/Linux%E7%9A%84Vim%E7%BC%96%E8%BE%91%E5%99%A8/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://maguscloud.ink/2018/10/05/06_Linux%E5%85%8B%E9%9A%86%E8%99%9A%E6%8B%9F%E6%9C%BA/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -673,18 +474,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2018/10/05/Linux%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/10/05/05_Linux%E7%9A%84%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE%E5%92%8C%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86%E6%93%8D%E4%BD%9C/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          03——Linux文件和目录结构
+          05——Linux网络配置和系统管理操作
         
       </div>
     </a>
   
   
-    <a href="/2018/10/05/Linux%E7%9A%84%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE%E5%92%8C%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86%E6%93%8D%E4%BD%9C/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">05——Linux网络配置和系统管理操作</div>
+    <a href="/2018/10/05/07_Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">07——Linux常用命令</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -711,7 +512,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC4%E7%AB%A0-VIM%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-number">1.</span> <span class="toc-text">第4章 VIM编辑器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.</span> <span class="toc-text">4.1. 简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-VIM%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E4%B8%89%E7%A7%8D%E5%B7%A5%E4%BD%9C%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.2.</span> <span class="toc-text">4.2. VIM编辑器的三种工作模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-%E4%B8%80%E8%88%AC%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.3.</span> <span class="toc-text">4.3. 一般模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4-%E7%BC%96%E8%BE%91%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.4.</span> <span class="toc-text">4.4. 编辑模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-5-%E6%8C%87%E4%BB%A4%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.5.</span> <span class="toc-text">4.5. 指令模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E5%87%A0%E4%B8%AA%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">1.6.</span> <span class="toc-text">*常用的几个快捷键</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-6-VIM%E9%94%AE%E7%9B%98%E5%9B%BE"><span class="toc-number">1.7.</span> <span class="toc-text">4.6. VIM键盘图</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC6%E7%AB%A0-%E5%85%8B%E9%9A%86%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="toc-number">1.</span> <span class="toc-text">第6章 克隆虚拟机</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1-%E5%85%8B%E9%9A%86%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="toc-number">1.1.</span> <span class="toc-text">6.1 克隆虚拟机</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-%E5%85%8B%E9%9A%86%E5%AE%8C%E6%88%90%E5%90%8E%E7%9A%84%E9%85%8D%E7%BD%AE"><span class="toc-number">1.2.</span> <span class="toc-text">6.2 克隆完成后的配置</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -881,6 +682,10 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">6.046J</a>
               </li>
              
@@ -902,10 +707,6 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">个人书单</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -933,11 +734,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习资源</a>
+                <a href="javascript:void(0)" class="js-tag color5">学习方法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习方法</a>
+                <a href="javascript:void(0)" class="js-tag color5">学习资源</a>
               </li>
              
               <li class="article-tag-list-item">

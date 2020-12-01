@@ -6,25 +6,58 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://maguscloud.ink">
-  <title>03——Linux文件和目录结构 | Magus的小屋</title>
+  <title>02——Linux安装 | Magus的小屋</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="第3章 文件和目录结构3.1 文件Linux系统中一切皆文件。">
+  <meta name="description" content="第2章 Linux安装我们将在虚拟机上进行Linux系统及其命令的学习">
 <meta property="og:type" content="article">
-<meta property="og:title" content="03——Linux文件和目录结构">
-<meta property="og:url" content="http://maguscloud.ink/2018/10/05/Linux%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/index.html">
+<meta property="og:title" content="02——Linux安装">
+<meta property="og:url" content="http://maguscloud.ink/2018/10/05/02_Linux%E5%AE%89%E8%A3%85/index.html">
 <meta property="og:site_name" content="Magus的小屋">
-<meta property="og:description" content="第3章 文件和目录结构3.1 文件Linux系统中一切皆文件。">
+<meta property="og:description" content="第2章 Linux安装我们将在虚拟机上进行Linux系统及其命令的学习">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202013421.png">
-<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202030424.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202004721.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202014503.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202014520.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202014643.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202014715.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202014734.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202014804.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202014826.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202014919.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202014930.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202014943.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202014957.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015021.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015046.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015057.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015108.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015147.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015159.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015212.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015313.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015337.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015433.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015459.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015513.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015530.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015639.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015654.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015711.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015737.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015803.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202012019.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202020053.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202020258.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202020507.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202012131.png">
 <meta property="article:published_time" content="2018-10-05T13:19:15.000Z">
-<meta property="article:modified_time" content="2020-12-01T22:50:44.382Z">
+<meta property="article:modified_time" content="2020-12-01T22:44:24.991Z">
 <meta property="article:author" content="Magus">
 <meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202013421.png">
+<meta name="twitter:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202004721.png">
   
     <link rel="alternative" href="/atom.xml" title="Magus的小屋" type="application/atom+xml">
   
@@ -235,7 +268,7 @@
           </div>
           <div id="js-content" class="content-ll">
             
-    <article id="post-Linux文件结构" class="article article-type-post " itemscope itemprop="blogPost">
+    <article id="post-02_Linux安装" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -243,7 +276,7 @@
   
   
     <h1 class="article-title" itemprop="name">
-      03——Linux文件和目录结构
+      02——Linux安装
     </h1>
   
 
@@ -255,7 +288,7 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2018/10/05/Linux%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/" class="archive-article-date">
+<a href="/2018/10/05/02_Linux%E5%AE%89%E8%A3%85/" class="archive-article-date">
         <time datetime="2018-10-05T13:19:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-05</time>
 </a>
 
@@ -269,7 +302,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">1.2k字</span>
+      <span class="post-count">646字</span>
     </span>
   </span>
 
@@ -278,7 +311,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">4分</span>
+      <span class="post-count">2分</span>
     </span>
   </span>
 </div>
@@ -292,72 +325,68 @@
         
     
     
-    <h1 id="第3章-文件和目录结构"><a href="#第3章-文件和目录结构" class="headerlink" title="第3章 文件和目录结构"></a>第3章 文件和目录结构</h1><h2 id="3-1-文件"><a href="#3-1-文件" class="headerlink" title="3.1 文件"></a>3.1 文件</h2><p>Linux系统中一切皆文件。<a id="more"></a></p>
-<p>在Linux系统中任何东西都是以文件形式来存储的。这其中不仅包括我们熟知的文本文件、可执行文件等等，还包括硬件设备、虚拟设备、网络连接等等，甚至连目录其实都是一种特殊的文件。</p>
-<h2 id="3-2-Linux目录结构"><a href="#3-2-Linux目录结构" class="headerlink" title="3.2 Linux目录结构"></a>3.2 Linux目录结构</h2><p>在Windows中，每一个盘符下是一个独立的文件系统，硬盘有多少个分区就有多少个文件系统。而在Linux系统中不管创建了多少个硬盘分区都只有一个文件系统。整个文件系统的根目录是“/”，从“/”根目录出发理论上可以找到Linux系统中的所有目录和文件。</p>
-<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202013421.png" alt="image-20201202013421809" style="zoom:67%;" />
+    <h1 id="第2章-Linux安装"><a href="#第2章-Linux安装" class="headerlink" title="第2章 Linux安装"></a>第2章 Linux安装</h1><p>我们将在虚拟机上进行Linux系统及其命令的学习<a id="more"></a></p>
+<p>首先，我们需要理解两个概念： 物理机和虚拟机。</p>
+<p>创建虚拟机需要一台支持虚拟化的物理机（一般推荐i5）、虚拟化软件（VMWare）。步骤大体分两步，第一步使用虚拟化软件（VMWara）虚拟出一台虚拟机，然后再为这台虚拟机安装操作系统！</p>
+<h2 id="2-0-什么是虚拟化"><a href="#2-0-什么是虚拟化" class="headerlink" title="2.0 什么是虚拟化"></a>2.0 什么是虚拟化</h2><p>在计算机中，<strong>虚拟化</strong>（英语：Virtualization）是一种资源管理技术，是将计算机的各种实体资源，如服务器、网络、内存及存储等，予以抽象、转换后呈现出来，打破实体结构间的不可切割的障碍，使用户可以比原本的组态更好的方式来应用这些资源。这些资源的新虚拟部分是不受现有资源的架设方式，地域或物理组态所限制。一般所指的虚拟化资源包括计算能力和资料存储</p>
+<h2 id="2-1-查看虚拟化支持"><a href="#2-1-查看虚拟化支持" class="headerlink" title="2.1 查看虚拟化支持"></a>2.1 查看虚拟化支持</h2><img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202004721.png" alt="image-20201202004721289" style="zoom:67%;" />
 
-<ul>
-<li><p><font color=red>/bin</font> (<font color=red>bin</font>aries)存放二进制可执行文件，即常用的命令</p>
-</li>
-<li><p>/sbin (<font color=red>s</font>uper user <font color=red>bin</font>aries)存放只有root才能访问的二进制可执行文件，是管理员使用的系统管理程序</p>
-</li>
-<li><p><font color=red>/etc</font> (<font color=red>etc</font>etera)存放的是所有的系统管理所需要的配置文件和子目录</p>
-</li>
-<li><p><font color=red>/usr</font> (<font color=red>u</font>nix <font color=red>s</font>hared <font color=red>r</font>esources)用于存放共享的系统资源。这是一个非常重要的目录，用户的很多应用程序和文件都存放在这个目录下，类似于windows下的progrm files目录。</p>
-</li>
-<li><p><font color=red>/home</font> 存放普通用户的主目录，在Linux中每个用户都有一个自己的目录，一般该目录名是以用户的账号命名的</p>
-</li>
-<li><p><font color=red>/root</font> 超级权限者的用户主目录，该目录为系统管理员所有</p>
-</li>
-<li><p>/dev (<font color=red>dev</font>ices)类似于windows的设备管理器，把所有的硬件用文件的形式存储</p>
-</li>
-<li><p>/lib (<font color=red>lib</font>rary)存放跟文件系统中的程序运行所需要的共享库及内核模块。系统开机所需要最基本的动态连接共享库，其作用类似于windows里的DLL文件。几乎所有的应用程序都需要用到这些共享库。</p>
-</li>
-<li><p><font color=red>/mnt</font> (<font color=red>m</font>ou<font color=red>nt</font>)系统管理员安装临时文件系统的安装点。系统提供这个目录是为了让用户临时挂载别的文件系统的，我们可以将外部的存储挂载在/mnt上，然后进入该目录就可以查看里面的内容了。</p>
-</li>
-<li><p><font color=red>/boot</font> 存放的是启动Linux时使用的一些核心文件，包括一些连接文件以及镜像文件，自己的安装别放在这里。</p>
-</li>
-<li><p>/tmp (<font color=red>t</font>e<font color=red>mp</font>orary)用于存放各种临时文件</p>
-</li>
-<li><p><font color=red>/var</font> (<font color=red>var</font>iable)用于存放运行时需要改变数据的文件。（这个目录中存放着在不断扩充着的东西。我们习惯将那些经常被修改的目录放在这个目录下。包括各种日志文件）</p>
-</li>
-<li><p>/lost+found 这个目录一般是空的，当系统非法关机后。这里就存放了一些文件</p>
-</li>
-<li><p>/proc 这个目录是一个虚拟的目录，他是系统内存的映射，我们可以通过直接访问这个目录来获取系统信息。</p>
-</li>
-<li><p>/srv （<font color=red>s</font>e<font color=red>rv</font>ice）该目录存放一些服务启动之后需要提取的数据。</p>
-</li>
-<li><p>/sys 这是Linux2.6内核的一个很大的变化。该目录下安装了2.6内核中新出现的一个文件系统sysfs。</p>
-</li>
-<li><p><font color=red>/media</font> Linux系统会自动识别一些设备，例如U盘、光驱等等，当识别后，Linux会把识别的设备挂载到这个目录下</p>
-</li>
-<li><p><font color=red>/opt</font> 这是给主机额外安装软件所摆放的目录。比如你安装一个mysql数据库则就可以放到这个目录下。默认是空的</p>
-</li>
-<li><p>/selinux SELinux是一种安全子系统，他能控制程序只能访问特定文件</p>
-</li>
-</ul>
-<h2 id="3-3-Linux系统中的路径"><a href="#3-3-Linux系统中的路径" class="headerlink" title="3.3 Linux系统中的路径"></a>3.3 Linux系统中的路径</h2><ul>
-<li>绝对路径：从“/”根目录开始逐层查找文件和目录。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;etc&#x2F;sysconfig&#x2F;network-scripts</span><br><span class="line">&#x2F;tmp&#x2F;vmware-root&#x2F;vmware-db.pl.2267</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>相对路径：以当前目录或上一级目录为基准逐层查找文件和目录</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">当前目录：“.&#x2F;”</span><br><span class="line">当前目录的上一级目录：“..&#x2F;”</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-4-用户家目录"><a href="#3-4-用户家目录" class="headerlink" title="3.4 用户家目录"></a>3.4 用户家目录</h2><ol>
-<li><p>作用：Linux系统为每一个用户提供了一个专属的目录用来存放它自己的文件内容，在Linux中使用“~”代表用户的家目录</p>
-</li>
-<li><p>root用户：家目录是/root目录。Centos中root用户一般登录后的命令框显示<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202030424.png" alt="image-20201202030424181"></p>
-</li>
-<li><p>普通用户：在创建后会在/home目录下创建与用户名同名的目录。例如：用户tom的家目录是/home/tom</p>
-</li>
-</ol>
+<p>开启：进入BIOS Setup设置界面，更改虚拟化选项为enable，保存后重启</p>
+<p><img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202014503.png" alt="image-20201202014503629" style="zoom:50%;" /><img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202014520.png" alt="image-20201202014520170" style="zoom:50%;" /></p>
 <blockquote>
-<p>切换用户使用：su 账户名 </p>
+<p>注意：部分机型使用Intel Virtualization Technology表示，AMD CPU则使用“SVM Support”表示</p>
 </blockquote>
+<h2 id="2-2-安装虚拟机和Centos以及VMTools工具"><a href="#2-2-安装虚拟机和Centos以及VMTools工具" class="headerlink" title="2.2 安装虚拟机和Centos以及VMTools工具"></a>2.2 安装虚拟机和Centos以及VMTools工具</h2><ul>
+<li>win10安装VMware15.5Pro</li>
+<li>VMwareWorkstation15.5Pro创建CentOS7虚拟机<ul>
+<li>步骤1<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202014643.png" alt="image-20201202014643308" style="zoom: 50%;" /></li>
+<li>步骤2<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202014715.png" alt="image-20201202014715781" style="zoom:50%;" /></li>
+<li>步骤3<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202014734.png" alt="image-20201202014733990" style="zoom:50%;" /></li>
+<li>步骤4<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202014804.png" alt="image-20201202014804229" style="zoom:50%;" /></li>
+<li>步骤5<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202014826.png" alt="image-20201202014826878" style="zoom:50%;" /></li>
+<li>步骤6<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202014919.png" alt="image-20201202014919252" style="zoom:50%;" /></li>
+<li>步骤7<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202014930.png" alt="image-20201202014930132" style="zoom:50%;" /></li>
+<li>步骤8<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202014943.png" alt="image-20201202014943756" style="zoom:50%;" /></li>
+<li>步骤9<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202014957.png" alt="image-20201202014957558" style="zoom:50%;" /></li>
+<li>步骤10<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015021.png" alt="image-20201202015021939" style="zoom: 50%;" /></li>
+<li>步骤11<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015046.png" alt="image-20201202015046565" style="zoom:50%;" /></li>
+<li>步骤12<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015057.png" alt="image-20201202015057798" style="zoom:50%;" /></li>
+<li>步骤13<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015108.png" alt="image-20201202015108005" style="zoom:50%;" /></li>
+<li>步骤14<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015147.png" alt="image-20201202015146972" style="zoom:50%;" /></li>
+<li>步骤15<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015159.png" alt="image-20201202015159095" style="zoom:50%;" /></li>
+<li>步骤16<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015212.png" alt="image-20201202015212435" style="zoom: 50%;" /></li>
+</ul>
+</li>
+<li>安装CentOS7<ul>
+<li>步骤1启动刚创建的虚拟机<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015313.png" alt="image-20201202015313003" style="zoom:50%;" /></li>
+<li>步骤2选择语言<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015337.png" alt="image-20201202015337327" style="zoom:50%;" />外语好的可以选择其他版本</li>
+<li>步骤3选择安装类型<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015433.png" alt="image-20201202015433183" style="zoom:50%;" /></li>
+<li>步骤4 硬盘分区<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015459.png" alt="image-20201202015459069" style="zoom:50%;" /><img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015513.png" alt="image-20201202015513790" style="zoom:50%;" /><img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015530.png" alt="image-20201202015530097" style="zoom:50%;" /></li>
+<li>步骤5配置网络和主机名<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015639.png" alt="image-20201202015638917" style="zoom:50%;" /><img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015654.png" alt="image-20201202015654633" style="zoom:50%;" /><img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015711.png" alt="image-20201202015711070" style="zoom:50%;" /></li>
+<li>步骤6开始安装<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015737.png" alt="image-20201202015736952" style="zoom:50%;" /></li>
+<li>重启完成安装<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202015803.png" alt="image-20201202015803102" style="zoom:50%;" /></li>
+</ul>
+</li>
+</ul>
+<p>具体可查看[blog](<a target="_blank" rel="noopener" href="https://www.cnblogs.com/pyyu/articles/9313587.html">VMware与Centos系统安装 - py鱼 - 博客园 (cnblogs.com)</a>)</p>
+<blockquote>
+<p>注意：安裝成功后，需要重启虚拟机。</p>
+</blockquote>
+<h2 id="2-3-网络配置"><a href="#2-3-网络配置" class="headerlink" title="2.3 网络配置"></a>2.3 网络配置</h2><p> <img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202012019.png" alt="image-20201202012019297"></p>
+<ul>
+<li>更改虚拟机网关<ul>
+<li>进入虚拟网络编辑器<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202020053.png" alt="image-20201202020053058"></li>
+<li>选择NAT模式，点击更改设置<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202020258.png" alt="image-20201202020258428" style="zoom:50%;" /></li>
+<li>修改子网IP和子网掩码<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202020507.png" alt="image-20201202020507882" style="zoom:50%;" /></li>
+</ul>
+</li>
+</ul>
+<p><a href="http://maguscloud.ink/2018/12/1/05%E2%80%94%E2%80%94Linux%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE%E5%92%8C%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86%E6%93%8D%E4%BD%9C/">详见</a></p>
+<h2 id="2-4-远程连接"><a href="#2-4-远程连接" class="headerlink" title="2.4 远程连接"></a>2.4 远程连接</h2><p>远程连接工具通常基于SSH协议，SSH（Secure Shell）协议是一种基于密钥的安全性很好的协议,将发送的数据加密。因此虚拟机需要开启SSH协议的服务，即sshd服务。</p>
+<p><img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202012131.png" alt="image-20201202012131519"></p>
+<p>如果没有运行，则执行service sshd start,开启服务即可！</p>
+<p>我们常用的远程客户端有：</p>
+<p>putty<br>**<a target="_blank" rel="noopener" href="https://www.cnblogs.com/cn-chy-com/p/8867308.html">SecureCRT</a><br><a target="_blank" rel="noopener" href="https://www.linuxidc.com/linux/2019-08/160381.htm">XShell</a>**<br>MobaXterm</p>
 
     
 
@@ -404,7 +433,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://maguscloud.ink/2018/10/05/Linux文件结构/" title="03——Linux文件和目录结构" target="_blank">http://maguscloud.ink/2018/10/05/Linux文件结构/</a>
+          <a href="http://maguscloud.ink/2018/10/05/02_Linux安装/" title="02——Linux安装" target="_blank">http://maguscloud.ink/2018/10/05/02_Linux安装/</a>
         </li>
         
         <li>
@@ -493,7 +522,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://maguscloud.ink/2018/10/05/Linux%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://maguscloud.ink/2018/10/05/02_Linux%E5%AE%89%E8%A3%85/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -508,18 +537,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2018/10/05/Linux%E5%AE%89%E8%A3%85/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/10/05/01_Linux%E7%AE%80%E4%BB%8B/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          02——Linux安装
+          01——Linux简介
         
       </div>
     </a>
   
   
-    <a href="/2018/10/05/Linux%E7%9A%84Vim%E7%BC%96%E8%BE%91%E5%99%A8/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">04——Linux中的VIM编辑器</div>
+    <a href="/2018/10/05/03_Linux%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">03——Linux文件和目录结构</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -546,7 +575,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC3%E7%AB%A0-%E6%96%87%E4%BB%B6%E5%92%8C%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"><span class="toc-number">1.</span> <span class="toc-text">第3章 文件和目录结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-%E6%96%87%E4%BB%B6"><span class="toc-number">1.1.</span> <span class="toc-text">3.1 文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-Linux%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"><span class="toc-number">1.2.</span> <span class="toc-text">3.2 Linux目录结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-Linux%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%9A%84%E8%B7%AF%E5%BE%84"><span class="toc-number">1.3.</span> <span class="toc-text">3.3 Linux系统中的路径</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4-%E7%94%A8%E6%88%B7%E5%AE%B6%E7%9B%AE%E5%BD%95"><span class="toc-number">1.4.</span> <span class="toc-text">3.4 用户家目录</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC2%E7%AB%A0-Linux%E5%AE%89%E8%A3%85"><span class="toc-number">1.</span> <span class="toc-text">第2章 Linux安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-0-%E4%BB%80%E4%B9%88%E6%98%AF%E8%99%9A%E6%8B%9F%E5%8C%96"><span class="toc-number">1.1.</span> <span class="toc-text">2.0 什么是虚拟化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-%E6%9F%A5%E7%9C%8B%E8%99%9A%E6%8B%9F%E5%8C%96%E6%94%AF%E6%8C%81"><span class="toc-number">1.2.</span> <span class="toc-text">2.1 查看虚拟化支持</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%92%8CCentos%E4%BB%A5%E5%8F%8AVMTools%E5%B7%A5%E5%85%B7"><span class="toc-number">1.3.</span> <span class="toc-text">2.2 安装虚拟机和Centos以及VMTools工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE"><span class="toc-number">1.4.</span> <span class="toc-text">2.3 网络配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5"><span class="toc-number">1.5.</span> <span class="toc-text">2.4 远程连接</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -716,6 +745,10 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">6.046J</a>
               </li>
              
@@ -737,10 +770,6 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">个人书单</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -768,11 +797,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习资源</a>
+                <a href="javascript:void(0)" class="js-tag color5">学习方法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习方法</a>
+                <a href="javascript:void(0)" class="js-tag color5">学习资源</a>
               </li>
              
               <li class="article-tag-list-item">

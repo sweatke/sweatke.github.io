@@ -6,27 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://maguscloud.ink">
-  <title>01——Linux简介 | Magus的小屋</title>
+  <title>04——Linux中的VIM编辑器 | Magus的小屋</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="第1章 Linux简介1.1开源的力量1.1.1 我们已经用过的开源软件">
+  <meta name="description" content="第4章 VIM编辑器4.1. 简介VIM是Linux系统环境下的一款非常重要的文本编辑工具，我们在Linux环境下几乎所有的文本文件编辑工作都是靠它。可能你还听说过VI，嗯，VIM是VI的升级版。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="01——Linux简介">
-<meta property="og:url" content="http://maguscloud.ink/2018/10/05/Linux%E7%AE%80%E4%BB%8B/index.html">
+<meta property="og:title" content="04——Linux中的VIM编辑器">
+<meta property="og:url" content="http://maguscloud.ink/2018/10/05/04_Linux%E7%9A%84Vim%E7%BC%96%E8%BE%91%E5%99%A8/index.html">
 <meta property="og:site_name" content="Magus的小屋">
-<meta property="og:description" content="第1章 Linux简介1.1开源的力量1.1.1 我们已经用过的开源软件">
+<meta property="og:description" content="第4章 VIM编辑器4.1. 简介VIM是Linux系统环境下的一款非常重要的文本编辑工具，我们在Linux环境下几乎所有的文本文件编辑工作都是靠它。可能你还听说过VI，嗯，VIM是VI的升级版。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202003050.png">
-<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202003512.png">
-<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202003845.png">
-<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202014225.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202031121.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202031314.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202034451.png">
 <meta property="article:published_time" content="2018-10-05T13:19:15.000Z">
-<meta property="article:modified_time" content="2020-12-01T22:50:19.637Z">
+<meta property="article:modified_time" content="2020-12-01T22:50:03.683Z">
 <meta property="article:author" content="Magus">
 <meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202003050.png">
+<meta name="twitter:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202031121.png">
   
     <link rel="alternative" href="/atom.xml" title="Magus的小屋" type="application/atom+xml">
   
@@ -237,7 +236,7 @@
           </div>
           <div id="js-content" class="content-ll">
             
-    <article id="post-Linux简介" class="article article-type-post " itemscope itemprop="blogPost">
+    <article id="post-04_Linux的Vim编辑器" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -245,7 +244,7 @@
   
   
     <h1 class="article-title" itemprop="name">
-      01——Linux简介
+      04——Linux中的VIM编辑器
     </h1>
   
 
@@ -257,7 +256,7 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2018/10/05/Linux%E7%AE%80%E4%BB%8B/" class="archive-article-date">
+<a href="/2018/10/05/04_Linux%E7%9A%84Vim%E7%BC%96%E8%BE%91%E5%99%A8/" class="archive-article-date">
         <time datetime="2018-10-05T13:19:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-05</time>
 </a>
 
@@ -271,7 +270,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">1.7k字</span>
+      <span class="post-count">948字</span>
     </span>
   </span>
 
@@ -280,7 +279,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">6分</span>
+      <span class="post-count">3分</span>
     </span>
   </span>
 </div>
@@ -294,84 +293,236 @@
         
     
     
-    <h1 id="第1章-Linux简介"><a href="#第1章-Linux简介" class="headerlink" title="第1章 Linux简介"></a>第1章 Linux简介</h1><h2 id="1-1开源的力量"><a href="#1-1开源的力量" class="headerlink" title="1.1开源的力量"></a>1.1开源的力量</h2><h3 id="1-1-1-我们已经用过的开源软件"><a href="#1-1-1-我们已经用过的开源软件" class="headerlink" title="1.1.1 我们已经用过的开源软件"></a>1.1.1 我们已经用过的开源软件<a id="more"></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Spring</span><br><span class="line">MyBatis</span><br><span class="line">Tomcat</span><br><span class="line">MySQL</span><br><span class="line">JDK</span><br><span class="line">……</span><br></pre></td></tr></table></figure>
+    <h1 id="第4章-VIM编辑器"><a href="#第4章-VIM编辑器" class="headerlink" title="第4章 VIM编辑器"></a>第4章 VIM编辑器</h1><h2 id="4-1-简介"><a href="#4-1-简介" class="headerlink" title="4.1. 简介"></a>4.1. 简介</h2><p>VIM是Linux系统环境下的一款非常重要的文本编辑工具，我们在Linux环境下几乎所有的文本文件编辑工作都是靠它。可能你还听说过VI，嗯，VIM是VI的升级版。<a id="more"></a></p>
+<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202031121.png" alt="image-20201202031121803" style="zoom: 67%;" />
 
-<h3 id="1-1-2-开源软件领域的旗帜：Linux"><a href="#1-1-2-开源软件领域的旗帜：Linux" class="headerlink" title="1.1.2 开源软件领域的旗帜：Linux"></a>1.1.2 开源软件领域的旗帜：Linux</h3><blockquote>
-<p>操作系统是各种设备硬件和用户之间的桥梁；分为开源和不开源  （open source）<br>常见PC端操作系统Windows 、MacOS、Linux、unix<br>常见移动端操作系统Android、IOS</p>
-</blockquote>
-<p>Linux是一款类Unix操作系统，它的出现离不开GNU自由软件运动中诞生的开发环境和编译器，又反过来极大的推动了GNU自由软件运动，让崇尚自由软件精神的先驱们不必继续局限在Unix系统上进行开发。Linux出现后，sendmail, wu-ftp, apache等团队纷纷启动了基于Linux系统的开发计划。</p>
-<p>​      <img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202003050.png" alt="image-20201202003050231">                    </p>
 <blockquote>
-<p>你知道吗？Linux存在着许多不同的Linux版本，但它们都使用了Linux内核，可安装在各种计算机硬件设备中，比如手机、平板电脑、路由器、台式计算机</p>
+<p>vi / vim是Unix / Linux上最常用的文本编辑器而且功能非常强大<br>只有命令，没有菜单  </p>
 </blockquote>
-<h3 id="1-1-3-软件开源的好处"><a href="#1-1-3-软件开源的好处" class="headerlink" title="1.1.3 软件开源的好处"></a>1.1.3 软件开源的好处</h3><ul>
-<li><strong>虚拟团队</strong></li>
-</ul>
-<p>参与开发、维护的团队成员不必身在同一个办公室，在世界任何一个角落都可以通过互联网对开源产品进行改进。</p>
-<ul>
-<li><strong>量身定制</strong></li>
-</ul>
-<p>自由软件允许使用者对软件产品进行修改，便于使用者最大限度满足自身需要。</p>
-<ul>
-<li><strong>广泛受益</strong></li>
-</ul>
-<p>让更多的人能够享受到开源软件提供的服务。</p>
-<ul>
-<li><strong>稳定高效</strong></li>
-</ul>
-<p>由于开源软件产品吸纳了全世界所有相关领域的最顶尖程序员一起来进行维护和排错，所以开源软件漏洞更少，效率更高。</p>
-<ul>
-<li><strong>开源不等于免费</strong></li>
-</ul>
-<p>开源指的是开放源代码，但编译得到的二进制可执行程序可能是收费的；或者产品免费，服务收费；再或者开发定制功能收费。所以，开源项目并不影响商业运作。</p>
-<h2 id="1-2-Linux的来历"><a href="#1-2-Linux的来历" class="headerlink" title="1.2. Linux的来历"></a>1.2. Linux的来历</h2><h3 id="1-2-1-Unix的尴尬"><a href="#1-2-1-Unix的尴尬" class="headerlink" title="1.2.1 Unix的尴尬"></a>1.2.1 Unix的尴尬</h3><ul>
-<li><strong>硬件相关</strong></li>
-</ul>
-<p>早期的Unix系统都是针对专门的硬件系统开发的，不同厂商都是为自己的服务器开发专门的Unix操作系统。</p>
-<ul>
-<li><strong>版权受限</strong></li>
-</ul>
-<p>出于商业等方面因素的考虑，AT&amp;T在1979年发行第七版Unix系统时收回了Unix的版权。</p>
-<h3 id="1-2-2-用于教学的Minix"><a href="#1-2-2-用于教学的Minix" class="headerlink" title="1.2.2 用于教学的Minix"></a>1.2.2 用于教学的Minix</h3><p>在Unix收回版权的背景下，出于学院教学的需要，荷兰阿姆斯特丹的Vrije大学计算机科学系的Andrew S. Tanenbaum教授开发了一个“类Unix”系统：Minix。之所以称为类Unix，是由于Tanenbaum教授为了避免版权纠纷在开发过程中刻意完全不看Unix本身代码，但同时要做到在使用时让用户的操作方式和使用Unix时一样。</p>
-<h3 id="1-2-3-受到启发的Linux"><a href="#1-2-3-受到启发的Linux" class="headerlink" title="1.2.3 受到启发的Linux"></a>1.2.3 受到启发的Linux</h3><p>Minix最有名的学生用户是Linus Torvalds，他在芬兰的赫尔辛基大学用Minix操作平台建立了一个新的操作系统的内核，他把它叫做Linux。</p>
-<p>Linux是 Linus Torvalds受到Minix的影响而开发的（Linus Torvalds不喜欢他的386电脑上的MS-DOS操作系统，安装了Minix，并以它为样本开发了原始的Linux内核）。</p>
-<p><img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202003512.png" alt="image-20201202003512495"></p>
+<h2 id="4-2-VIM编辑器的三种工作模式"><a href="#4-2-VIM编辑器的三种工作模式" class="headerlink" title="4.2. VIM编辑器的三种工作模式"></a>4.2. VIM编辑器的三种工作模式</h2><p><img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202031314.png" alt="image-20201202031314730"></p>
+<h2 id="4-3-一般模式"><a href="#4-3-一般模式" class="headerlink" title="4.3. 一般模式"></a>4.3. 一般模式</h2><p>以vi打开一个档案就直接进入一般模式了（这是默认的模式）。在这个模式中， 你可以使用『上下左右』按键来移动光标，你可以使用『删除字符』或『删除整行』来处理档案内容， 也可以使用『复制、贴上』来处理你的文件数据。</p>
+<table>
+<thead>
+<tr>
+<th><strong>按键</strong></th>
+<th><strong>功能描述</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>yy</td>
+<td>复制光标当前一行</td>
+</tr>
+<tr>
+<td>y数字y</td>
+<td>复制一段（从当前行复制n行）</td>
+</tr>
+<tr>
+<td>p</td>
+<td>箭头移动到目的行粘贴</td>
+</tr>
+<tr>
+<td>u</td>
+<td>undo, 撤销上一步</td>
+</tr>
+<tr>
+<td>Ctrl  + r</td>
+<td>redo，返回到undo之前</td>
+</tr>
+<tr>
+<td>dd</td>
+<td>删除光标当前行</td>
+</tr>
+<tr>
+<td>dG</td>
+<td>删除光标所在行到末尾行的所有内容</td>
+</tr>
+<tr>
+<td>d数字d</td>
+<td>删除光标（含）后多少行</td>
+</tr>
+<tr>
+<td>D</td>
+<td>删除光标所在处到行尾的内容</td>
+</tr>
+<tr>
+<td>**:**5,7d</td>
+<td>删除指定范围的行</td>
+</tr>
+<tr>
+<td>x</td>
+<td>删除一个字母，相当于del</td>
+</tr>
+<tr>
+<td>nx</td>
+<td>删除光标所在处后的n个字符</td>
+</tr>
+<tr>
+<td>X</td>
+<td>删除一个字母，相当于Backspace</td>
+</tr>
+<tr>
+<td>yw</td>
+<td>复制一个词</td>
+</tr>
+<tr>
+<td>r</td>
+<td>替换光标所在处的字符</td>
+</tr>
+<tr>
+<td>R</td>
+<td>从光标所在处开始替换，按Esc键结束</td>
+</tr>
+<tr>
+<td>dw</td>
+<td>删除一个词</td>
+</tr>
+<tr>
+<td>shift+^</td>
+<td>移动到行头</td>
+</tr>
+<tr>
+<td>shift+$</td>
+<td>移动到行尾</td>
+</tr>
+<tr>
+<td>1+shift+g</td>
+<td>移动到页头，数字</td>
+</tr>
+<tr>
+<td>shift+g</td>
+<td>移动到页尾</td>
+</tr>
+<tr>
+<td>数字N+shift+g</td>
+<td>移动到目标行</td>
+</tr>
+<tr>
+<td>gg</td>
+<td>到文本的第一行</td>
+</tr>
+<tr>
+<td>G</td>
+<td>到文本的最后一行</td>
+</tr>
+<tr>
+<td>:n</td>
+<td>到文本的第n行</td>
+</tr>
+</tbody></table>
+<h2 id="4-4-编辑模式"><a href="#4-4-编辑模式" class="headerlink" title="4.4. 编辑模式"></a>4.4. 编辑模式</h2><p>在一般模式中可以进行删除、复制、粘贴等的动作，但是却无法编辑文件内容的！要等到你按下『i, I, o, O, a, A, r, R』等任何一个字母之后才会进入编辑模式。</p>
+<p>注意了！通常在Linux中，按下这些按键时，在画面的左下方会出现『INSERT或 REPLACE』的字样，此时才可以进行编辑。而如果要回到一般模式时， 则必须要按下『Esc』这个按键即可退出编辑模式。</p>
+<table>
+<thead>
+<tr>
+<th>按键</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><font color=red> i  </font></td>
+<td><font color=red>当前光标前  </font></td>
+</tr>
+<tr>
+<td>a</td>
+<td>当前光标后</td>
+</tr>
+<tr>
+<td><font color=red> o  </font></td>
+<td><font color=red>当前光标行的下一行  </font></td>
+</tr>
+<tr>
+<td>I</td>
+<td>光标所在行最前</td>
+</tr>
+<tr>
+<td><font color=red> A  </font></td>
+<td><font color=red>光标所在行最后  </font></td>
+</tr>
+<tr>
+<td>O</td>
+<td>当前光标行的上一行</td>
+</tr>
+<tr>
+<td>s</td>
+<td>删除当前字符并进入编辑</td>
+</tr>
+<tr>
+<td>S</td>
+<td>删除整行并进入编辑</td>
+</tr>
+</tbody></table>
+<h2 id="4-5-指令模式"><a href="#4-5-指令模式" class="headerlink" title="4.5. 指令模式"></a>4.5. 指令模式</h2><p>在一般模式当中，输入『 : / ?』3个中的任何一个按钮，就可以将光标移动到最底下那一行。</p>
+<p>在这个模式当中， 可以提供你『搜寻资料』的动作，而读取、存盘、大量取代字符、离开 vi 、显示行号等动作是在此模式中达成的！</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>:w</td>
+<td>保存</td>
+</tr>
+<tr>
+<td>:q</td>
+<td>退出</td>
+</tr>
+<tr>
+<td>:!</td>
+<td>强制执行</td>
+</tr>
+<tr>
+<td>/要查找的词</td>
+<td>n 查找下一个，N 往上查找</td>
+</tr>
+<tr>
+<td>? 要查找的词</td>
+<td>n是查找上一个，N是往下查找</td>
+</tr>
+<tr>
+<td>:set nu</td>
+<td>显示行号</td>
+</tr>
+<tr>
+<td>:set nonu</td>
+<td>关闭行号</td>
+</tr>
+<tr>
+<td>:%s/str1/str2/g</td>
+<td>将str1批量替换为str2</td>
+</tr>
+</tbody></table>
 <blockquote>
-<p>“Talk is cheap,show me the code!”</p>
+<p>注意：</p>
+<p>①其实强制保存时，还要看是否具备权限，如果没有权限加了强制也不一定能保存进去</p>
+<p>②如果有未保存的修改则无法退出</p>
 </blockquote>
-<h2 id="1-3-Linux是什么？"><a href="#1-3-Linux是什么？" class="headerlink" title="1.3. Linux是什么？"></a>1.3. Linux<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202003845.png" alt="image-20201202003845811">是什么？</h2><h3 id="1-3-1-Linux是一款开源免费的操作系统。"><a href="#1-3-1-Linux是一款开源免费的操作系统。" class="headerlink" title="1.3.1 Linux是一款开源免费的操作系统。"></a>1.3.1 Linux是一款开源免费的操作系统。</h3><p>Linux内核最初只是由芬兰人林纳斯·托瓦兹（Linus Torvalds）在赫尔辛基大学上学时出于个人爱好而编写的。</p>
-<p>Linux是一套免费使用和自由传播的类Unix操作系统，是一个基于POSIX和UNIX的多用户、多任务、支持多线程和多CPU的操作系统。Linux能运行主要的UNIX工具软件、应用程序和网络协议。它支持32位和64位硬件。Linux继承了Unix以网络为核心的设计思想，是一个性能稳定的多用户网络操作系统。</p>
-<p>目前市面上较知名的发行版有：Ubuntu、RedHat、CentOS、Debain、Fedora、SuSE、OpenSUSE                        </p>
-<h3 id="1-3-2-Linux的优势"><a href="#1-3-2-Linux的优势" class="headerlink" title="1.3.2 Linux的优势"></a>1.3.2 Linux的优势</h3><p>Linux系统的优势主要体现在服务器端应用方面，在PC端还是Windows系统对用户操作体验和应用程序的支持更好。具体体现是：</p>
-<ul>
-<li><strong>性能强劲，安全稳定</strong></li>
-</ul>
-<p>Linux本来就是基于Unix概念而发展出来的操作系统，当然也继承了Unix稳定高效的特点。使用Linux系统的主机连续工作1年以上不死机、不重启是非常常见的。所以很多电影、动画中的特效制作这样需要强大运算能力的工作都是运行在Linux系统之上。</p>
-<ul>
-<li><strong>可定制</strong></li>
-</ul>
-<p>如果你对Linux足够了解，完全可以使用Linux内核搭配需要的组件构成一个定制版系统，甚至你可以修改Linux源码进行深度定制</p>
-<p>免费或少许费用</p>
-<p>学习Linux可以免费使用Linux的各种发行版，在商业用途中往往也只是支付很少的费用即可</p>
-<ul>
-<li><strong>硬件配置要求低</strong></li>
-</ul>
-<p>Linux内核只有几KB大小，仅运行内核的话需要的系统开销很小，以命令行方式操作Linux也一样。以图形化界面方式运行Linux需要的资源也比Windows更少。</p>
-<ul>
-<li><strong>嵌入移动设备</strong></li>
-</ul>
-<p>由于Linux只需要很少的资源就能够驱动所有硬件设备工作，所以非常适合嵌入到手机等移动设备中，例如现在我们使用的Android系统就是以Linux为核心的。</p>
-<h2 id="1-4-Linux内核与她的各种发行版"><a href="#1-4-Linux内核与她的各种发行版" class="headerlink" title="1.4. Linux内核与她的各种发行版"></a>1.4. Linux内核与她的各种发行版</h2><p><img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202014225.png" alt="image-20201202014225462"></p>
-<p>Torvalds和他的虚拟团队的工作仅仅是开发了Linux内核以及附带的一些工具，尚不能作为一个完整的可以交给终端用户使用的操作系统。为了方便用户使用，很多的商业公司或非营利团体，就将Linux 内核（包括工具）与可运行的软件整合起来，再加上系统的安装工具。这个『内核+软件+工具』的完全可安装的整体，我们称之为Linux distribution，这就是Linux的发行版，港台腔叫发行套件。这是Linux这样的开放式系统和Windows、Mac等这些封闭式系统的一个显著差别。</p>
-<p>初学Linux通常会选择CentOS，这其实是RedHat收费后去掉收费功能而发布的一个免费的社区版。</p>
-<p>主要的Linux发行版有：</p>
-<p>●<strong>Red Hat: <a target="_blank" rel="noopener" href="http://www.redhat.com/">http://www.redhat.com</a></strong></p>
-<p><strong>●Fedora: <a target="_blank" rel="noopener" href="http://fedoraproject.org/">http://fedoraproject.org/</a></strong></p>
-<p><strong>●Debian: <a target="_blank" rel="noopener" href="http://www.debian.org/">http://www.debian.org/</a></strong></p>
-<p><strong>●Ubuntu: <a target="_blank" rel="noopener" href="http://www.ubuntu.com/">http://www.ubuntu.com/</a></strong></p>
-<p><strong>●CentOS: <a target="_blank" rel="noopener" href="http://www.centos.org/">http://www.centos.org/</a></strong></p>
-<p>我们可以从网易开源镜像站获取CentOS系统的镜像文件</p>
-<p><a target="_blank" rel="noopener" href="http://mirrors.163.com/">http://mirrors.163.com/</a></p>
+<h2 id="常用的几个快捷键"><a href="#常用的几个快捷键" class="headerlink" title="*常用的几个快捷键"></a>*常用的几个快捷键</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Shift+ zz  /Ctrl+z</td>
+<td>保存退出，与“:wq”作用相同</td>
+</tr>
+<tr>
+<td>v</td>
+<td>进入字符可视模式</td>
+</tr>
+<tr>
+<td>V   或 Shift + v</td>
+<td>进入行可视模式</td>
+</tr>
+<tr>
+<td>Ctrl + v</td>
+<td>进入块可视模式</td>
+</tr>
+</tbody></table>
+<h2 id="4-6-VIM键盘图"><a href="#4-6-VIM键盘图" class="headerlink" title="4.6. VIM键盘图"></a>4.6. VIM键盘图</h2><p><img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202034451.png" alt="image-20201202034451467"></p>
 
     
 
@@ -418,7 +569,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://maguscloud.ink/2018/10/05/Linux简介/" title="01——Linux简介" target="_blank">http://maguscloud.ink/2018/10/05/Linux简介/</a>
+          <a href="http://maguscloud.ink/2018/10/05/04_Linux的Vim编辑器/" title="04——Linux中的VIM编辑器" target="_blank">http://maguscloud.ink/2018/10/05/04_Linux的Vim编辑器/</a>
         </li>
         
         <li>
@@ -507,7 +658,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://maguscloud.ink/2018/10/05/Linux%E7%AE%80%E4%BB%8B/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://maguscloud.ink/2018/10/05/04_Linux%E7%9A%84Vim%E7%BC%96%E8%BE%91%E5%99%A8/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -522,18 +673,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2018/10/05/Linux%E7%9A%84%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE%E5%92%8C%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86%E6%93%8D%E4%BD%9C/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/10/05/03_Linux%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          05——Linux网络配置和系统管理操作
+          03——Linux文件和目录结构
         
       </div>
     </a>
   
   
-    <a href="/2018/10/05/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">07——Linux常用命令</div>
+    <a href="/2018/10/05/05_Linux%E7%9A%84%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE%E5%92%8C%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86%E6%93%8D%E4%BD%9C/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">05——Linux网络配置和系统管理操作</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -560,7 +711,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC1%E7%AB%A0-Linux%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">第1章 Linux简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1%E5%BC%80%E6%BA%90%E7%9A%84%E5%8A%9B%E9%87%8F"><span class="toc-number">1.1.</span> <span class="toc-text">1.1开源的力量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-1-%E6%88%91%E4%BB%AC%E5%B7%B2%E7%BB%8F%E7%94%A8%E8%BF%87%E7%9A%84%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1.1 我们已经用过的开源软件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-2-%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6%E9%A2%86%E5%9F%9F%E7%9A%84%E6%97%97%E5%B8%9C%EF%BC%9ALinux"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.1.2 开源软件领域的旗帜：Linux</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-3-%E8%BD%AF%E4%BB%B6%E5%BC%80%E6%BA%90%E7%9A%84%E5%A5%BD%E5%A4%84"><span class="toc-number">1.1.3.</span> <span class="toc-text">1.1.3 软件开源的好处</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-Linux%E7%9A%84%E6%9D%A5%E5%8E%86"><span class="toc-number">1.2.</span> <span class="toc-text">1.2. Linux的来历</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-1-Unix%E7%9A%84%E5%B0%B4%E5%B0%AC"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.2.1 Unix的尴尬</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-2-%E7%94%A8%E4%BA%8E%E6%95%99%E5%AD%A6%E7%9A%84Minix"><span class="toc-number">1.2.2.</span> <span class="toc-text">1.2.2 用于教学的Minix</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-3-%E5%8F%97%E5%88%B0%E5%90%AF%E5%8F%91%E7%9A%84Linux"><span class="toc-number">1.2.3.</span> <span class="toc-text">1.2.3 受到启发的Linux</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-Linux%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">1.3.</span> <span class="toc-text">1.3. Linux是什么？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-1-Linux%E6%98%AF%E4%B8%80%E6%AC%BE%E5%BC%80%E6%BA%90%E5%85%8D%E8%B4%B9%E7%9A%84%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E3%80%82"><span class="toc-number">1.3.1.</span> <span class="toc-text">1.3.1 Linux是一款开源免费的操作系统。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-2-Linux%E7%9A%84%E4%BC%98%E5%8A%BF"><span class="toc-number">1.3.2.</span> <span class="toc-text">1.3.2 Linux的优势</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-Linux%E5%86%85%E6%A0%B8%E4%B8%8E%E5%A5%B9%E7%9A%84%E5%90%84%E7%A7%8D%E5%8F%91%E8%A1%8C%E7%89%88"><span class="toc-number">1.4.</span> <span class="toc-text">1.4. Linux内核与她的各种发行版</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC4%E7%AB%A0-VIM%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-number">1.</span> <span class="toc-text">第4章 VIM编辑器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.</span> <span class="toc-text">4.1. 简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-VIM%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E4%B8%89%E7%A7%8D%E5%B7%A5%E4%BD%9C%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.2.</span> <span class="toc-text">4.2. VIM编辑器的三种工作模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-%E4%B8%80%E8%88%AC%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.3.</span> <span class="toc-text">4.3. 一般模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4-%E7%BC%96%E8%BE%91%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.4.</span> <span class="toc-text">4.4. 编辑模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-5-%E6%8C%87%E4%BB%A4%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.5.</span> <span class="toc-text">4.5. 指令模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E5%87%A0%E4%B8%AA%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">1.6.</span> <span class="toc-text">*常用的几个快捷键</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-6-VIM%E9%94%AE%E7%9B%98%E5%9B%BE"><span class="toc-number">1.7.</span> <span class="toc-text">4.6. VIM键盘图</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -730,6 +881,10 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">6.046J</a>
               </li>
              
@@ -751,10 +906,6 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">个人书单</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -782,11 +933,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习资源</a>
+                <a href="javascript:void(0)" class="js-tag color5">学习方法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习方法</a>
+                <a href="javascript:void(0)" class="js-tag color5">学习资源</a>
               </li>
              
               <li class="article-tag-list-item">
