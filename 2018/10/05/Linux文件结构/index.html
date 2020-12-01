@@ -6,27 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://maguscloud.ink">
-  <title>01——Linux简介 | Magus的小屋</title>
+  <title>03——Linux文件和目录结构 | Magus的小屋</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="第1章 Linux简介1.1开源的力量1.1.1 我们已经用过的开源软件">
+  <meta name="description" content="第3章 文件和目录结构3.1 文件Linux系统中一切皆文件。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="01——Linux简介">
-<meta property="og:url" content="http://maguscloud.ink/2018/12/01/Linux%E7%AE%80%E4%BB%8B/index.html">
+<meta property="og:title" content="03——Linux文件和目录结构">
+<meta property="og:url" content="http://maguscloud.ink/2018/10/05/Linux%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/index.html">
 <meta property="og:site_name" content="Magus的小屋">
-<meta property="og:description" content="第1章 Linux简介1.1开源的力量1.1.1 我们已经用过的开源软件">
+<meta property="og:description" content="第3章 文件和目录结构3.1 文件Linux系统中一切皆文件。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202003050.png">
-<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202003512.png">
-<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202003845.png">
-<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202014225.png">
-<meta property="article:published_time" content="2018-12-01T13:19:15.000Z">
-<meta property="article:modified_time" content="2020-12-01T20:33:31.117Z">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202013421.png">
+<meta property="og:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202030424.png">
+<meta property="article:published_time" content="2018-10-05T13:19:15.000Z">
+<meta property="article:modified_time" content="2020-12-01T22:50:44.382Z">
 <meta property="article:author" content="Magus">
 <meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202003050.png">
+<meta name="twitter:image" content="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202013421.png">
   
     <link rel="alternative" href="/atom.xml" title="Magus的小屋" type="application/atom+xml">
   
@@ -237,7 +235,7 @@
           </div>
           <div id="js-content" class="content-ll">
             
-    <article id="post-Linux简介" class="article article-type-post " itemscope itemprop="blogPost">
+    <article id="post-Linux文件结构" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -245,7 +243,7 @@
   
   
     <h1 class="article-title" itemprop="name">
-      01——Linux简介
+      03——Linux文件和目录结构
     </h1>
   
 
@@ -257,8 +255,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2018/12/01/Linux%E7%AE%80%E4%BB%8B/" class="archive-article-date">
-        <time datetime="2018-12-01T13:19:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-01</time>
+<a href="/2018/10/05/Linux%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/" class="archive-article-date">
+        <time datetime="2018-10-05T13:19:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-05</time>
 </a>
 
   
@@ -271,7 +269,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">1.7k字</span>
+      <span class="post-count">1.2k字</span>
     </span>
   </span>
 
@@ -280,7 +278,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">6分</span>
+      <span class="post-count">4分</span>
     </span>
   </span>
 </div>
@@ -294,84 +292,72 @@
         
     
     
-    <h1 id="第1章-Linux简介"><a href="#第1章-Linux简介" class="headerlink" title="第1章 Linux简介"></a>第1章 Linux简介</h1><h2 id="1-1开源的力量"><a href="#1-1开源的力量" class="headerlink" title="1.1开源的力量"></a>1.1开源的力量</h2><h3 id="1-1-1-我们已经用过的开源软件"><a href="#1-1-1-我们已经用过的开源软件" class="headerlink" title="1.1.1 我们已经用过的开源软件"></a>1.1.1 我们已经用过的开源软件<a id="more"></a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Spring</span><br><span class="line">MyBatis</span><br><span class="line">Tomcat</span><br><span class="line">MySQL</span><br><span class="line">JDK</span><br><span class="line">……</span><br></pre></td></tr></table></figure>
+    <h1 id="第3章-文件和目录结构"><a href="#第3章-文件和目录结构" class="headerlink" title="第3章 文件和目录结构"></a>第3章 文件和目录结构</h1><h2 id="3-1-文件"><a href="#3-1-文件" class="headerlink" title="3.1 文件"></a>3.1 文件</h2><p>Linux系统中一切皆文件。<a id="more"></a></p>
+<p>在Linux系统中任何东西都是以文件形式来存储的。这其中不仅包括我们熟知的文本文件、可执行文件等等，还包括硬件设备、虚拟设备、网络连接等等，甚至连目录其实都是一种特殊的文件。</p>
+<h2 id="3-2-Linux目录结构"><a href="#3-2-Linux目录结构" class="headerlink" title="3.2 Linux目录结构"></a>3.2 Linux目录结构</h2><p>在Windows中，每一个盘符下是一个独立的文件系统，硬盘有多少个分区就有多少个文件系统。而在Linux系统中不管创建了多少个硬盘分区都只有一个文件系统。整个文件系统的根目录是“/”，从“/”根目录出发理论上可以找到Linux系统中的所有目录和文件。</p>
+<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202013421.png" alt="image-20201202013421809" style="zoom:67%;" />
 
-<h3 id="1-1-2-开源软件领域的旗帜：Linux"><a href="#1-1-2-开源软件领域的旗帜：Linux" class="headerlink" title="1.1.2 开源软件领域的旗帜：Linux"></a>1.1.2 开源软件领域的旗帜：Linux</h3><blockquote>
-<p>操作系统是各种设备硬件和用户之间的桥梁；分为开源和不开源  （open source）<br>常见PC端操作系统Windows 、MacOS、Linux、unix<br>常见移动端操作系统Android、IOS</p>
-</blockquote>
-<p>Linux是一款类Unix操作系统，它的出现离不开GNU自由软件运动中诞生的开发环境和编译器，又反过来极大的推动了GNU自由软件运动，让崇尚自由软件精神的先驱们不必继续局限在Unix系统上进行开发。Linux出现后，sendmail, wu-ftp, apache等团队纷纷启动了基于Linux系统的开发计划。</p>
-<p>​      <img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202003050.png" alt="image-20201202003050231">                    </p>
+<ul>
+<li><p><font color=red>/bin</font> (<font color=red>bin</font>aries)存放二进制可执行文件，即常用的命令</p>
+</li>
+<li><p>/sbin (<font color=red>s</font>uper user <font color=red>bin</font>aries)存放只有root才能访问的二进制可执行文件，是管理员使用的系统管理程序</p>
+</li>
+<li><p><font color=red>/etc</font> (<font color=red>etc</font>etera)存放的是所有的系统管理所需要的配置文件和子目录</p>
+</li>
+<li><p><font color=red>/usr</font> (<font color=red>u</font>nix <font color=red>s</font>hared <font color=red>r</font>esources)用于存放共享的系统资源。这是一个非常重要的目录，用户的很多应用程序和文件都存放在这个目录下，类似于windows下的progrm files目录。</p>
+</li>
+<li><p><font color=red>/home</font> 存放普通用户的主目录，在Linux中每个用户都有一个自己的目录，一般该目录名是以用户的账号命名的</p>
+</li>
+<li><p><font color=red>/root</font> 超级权限者的用户主目录，该目录为系统管理员所有</p>
+</li>
+<li><p>/dev (<font color=red>dev</font>ices)类似于windows的设备管理器，把所有的硬件用文件的形式存储</p>
+</li>
+<li><p>/lib (<font color=red>lib</font>rary)存放跟文件系统中的程序运行所需要的共享库及内核模块。系统开机所需要最基本的动态连接共享库，其作用类似于windows里的DLL文件。几乎所有的应用程序都需要用到这些共享库。</p>
+</li>
+<li><p><font color=red>/mnt</font> (<font color=red>m</font>ou<font color=red>nt</font>)系统管理员安装临时文件系统的安装点。系统提供这个目录是为了让用户临时挂载别的文件系统的，我们可以将外部的存储挂载在/mnt上，然后进入该目录就可以查看里面的内容了。</p>
+</li>
+<li><p><font color=red>/boot</font> 存放的是启动Linux时使用的一些核心文件，包括一些连接文件以及镜像文件，自己的安装别放在这里。</p>
+</li>
+<li><p>/tmp (<font color=red>t</font>e<font color=red>mp</font>orary)用于存放各种临时文件</p>
+</li>
+<li><p><font color=red>/var</font> (<font color=red>var</font>iable)用于存放运行时需要改变数据的文件。（这个目录中存放着在不断扩充着的东西。我们习惯将那些经常被修改的目录放在这个目录下。包括各种日志文件）</p>
+</li>
+<li><p>/lost+found 这个目录一般是空的，当系统非法关机后。这里就存放了一些文件</p>
+</li>
+<li><p>/proc 这个目录是一个虚拟的目录，他是系统内存的映射，我们可以通过直接访问这个目录来获取系统信息。</p>
+</li>
+<li><p>/srv （<font color=red>s</font>e<font color=red>rv</font>ice）该目录存放一些服务启动之后需要提取的数据。</p>
+</li>
+<li><p>/sys 这是Linux2.6内核的一个很大的变化。该目录下安装了2.6内核中新出现的一个文件系统sysfs。</p>
+</li>
+<li><p><font color=red>/media</font> Linux系统会自动识别一些设备，例如U盘、光驱等等，当识别后，Linux会把识别的设备挂载到这个目录下</p>
+</li>
+<li><p><font color=red>/opt</font> 这是给主机额外安装软件所摆放的目录。比如你安装一个mysql数据库则就可以放到这个目录下。默认是空的</p>
+</li>
+<li><p>/selinux SELinux是一种安全子系统，他能控制程序只能访问特定文件</p>
+</li>
+</ul>
+<h2 id="3-3-Linux系统中的路径"><a href="#3-3-Linux系统中的路径" class="headerlink" title="3.3 Linux系统中的路径"></a>3.3 Linux系统中的路径</h2><ul>
+<li>绝对路径：从“/”根目录开始逐层查找文件和目录。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;etc&#x2F;sysconfig&#x2F;network-scripts</span><br><span class="line">&#x2F;tmp&#x2F;vmware-root&#x2F;vmware-db.pl.2267</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>相对路径：以当前目录或上一级目录为基准逐层查找文件和目录</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">当前目录：“.&#x2F;”</span><br><span class="line">当前目录的上一级目录：“..&#x2F;”</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-4-用户家目录"><a href="#3-4-用户家目录" class="headerlink" title="3.4 用户家目录"></a>3.4 用户家目录</h2><ol>
+<li><p>作用：Linux系统为每一个用户提供了一个专属的目录用来存放它自己的文件内容，在Linux中使用“~”代表用户的家目录</p>
+</li>
+<li><p>root用户：家目录是/root目录。Centos中root用户一般登录后的命令框显示<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202030424.png" alt="image-20201202030424181"></p>
+</li>
+<li><p>普通用户：在创建后会在/home目录下创建与用户名同名的目录。例如：用户tom的家目录是/home/tom</p>
+</li>
+</ol>
 <blockquote>
-<p>你知道吗？Linux存在着许多不同的Linux版本，但它们都使用了Linux内核，可安装在各种计算机硬件设备中，比如手机、平板电脑、路由器、台式计算机</p>
+<p>切换用户使用：su 账户名 </p>
 </blockquote>
-<h3 id="1-1-3-软件开源的好处"><a href="#1-1-3-软件开源的好处" class="headerlink" title="1.1.3 软件开源的好处"></a>1.1.3 软件开源的好处</h3><ul>
-<li><strong>虚拟团队</strong></li>
-</ul>
-<p>参与开发、维护的团队成员不必身在同一个办公室，在世界任何一个角落都可以通过互联网对开源产品进行改进。</p>
-<ul>
-<li><strong>量身定制</strong></li>
-</ul>
-<p>自由软件允许使用者对软件产品进行修改，便于使用者最大限度满足自身需要。</p>
-<ul>
-<li><strong>广泛受益</strong></li>
-</ul>
-<p>让更多的人能够享受到开源软件提供的服务。</p>
-<ul>
-<li><strong>稳定高效</strong></li>
-</ul>
-<p>由于开源软件产品吸纳了全世界所有相关领域的最顶尖程序员一起来进行维护和排错，所以开源软件漏洞更少，效率更高。</p>
-<ul>
-<li><strong>开源不等于免费</strong></li>
-</ul>
-<p>开源指的是开放源代码，但编译得到的二进制可执行程序可能是收费的；或者产品免费，服务收费；再或者开发定制功能收费。所以，开源项目并不影响商业运作。</p>
-<h2 id="1-2-Linux的来历"><a href="#1-2-Linux的来历" class="headerlink" title="1.2. Linux的来历"></a>1.2. Linux的来历</h2><h3 id="1-2-1-Unix的尴尬"><a href="#1-2-1-Unix的尴尬" class="headerlink" title="1.2.1 Unix的尴尬"></a>1.2.1 Unix的尴尬</h3><ul>
-<li><strong>硬件相关</strong></li>
-</ul>
-<p>早期的Unix系统都是针对专门的硬件系统开发的，不同厂商都是为自己的服务器开发专门的Unix操作系统。</p>
-<ul>
-<li><strong>版权受限</strong></li>
-</ul>
-<p>出于商业等方面因素的考虑，AT&amp;T在1979年发行第七版Unix系统时收回了Unix的版权。</p>
-<h3 id="1-2-2-用于教学的Minix"><a href="#1-2-2-用于教学的Minix" class="headerlink" title="1.2.2 用于教学的Minix"></a>1.2.2 用于教学的Minix</h3><p>在Unix收回版权的背景下，出于学院教学的需要，荷兰阿姆斯特丹的Vrije大学计算机科学系的Andrew S. Tanenbaum教授开发了一个“类Unix”系统：Minix。之所以称为类Unix，是由于Tanenbaum教授为了避免版权纠纷在开发过程中刻意完全不看Unix本身代码，但同时要做到在使用时让用户的操作方式和使用Unix时一样。</p>
-<h3 id="1-2-3-受到启发的Linux"><a href="#1-2-3-受到启发的Linux" class="headerlink" title="1.2.3 受到启发的Linux"></a>1.2.3 受到启发的Linux</h3><p>Minix最有名的学生用户是Linus Torvalds，他在芬兰的赫尔辛基大学用Minix操作平台建立了一个新的操作系统的内核，他把它叫做Linux。</p>
-<p>Linux是 Linus Torvalds受到Minix的影响而开发的（Linus Torvalds不喜欢他的386电脑上的MS-DOS操作系统，安装了Minix，并以它为样本开发了原始的Linux内核）。</p>
-<p><img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202003512.png" alt="image-20201202003512495"></p>
-<blockquote>
-<p>“Talk is cheap,show me the code!”</p>
-</blockquote>
-<h2 id="1-3-Linux是什么？"><a href="#1-3-Linux是什么？" class="headerlink" title="1.3. Linux是什么？"></a>1.3. Linux<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202003845.png" alt="image-20201202003845811">是什么？</h2><h3 id="1-3-1-Linux是一款开源免费的操作系统。"><a href="#1-3-1-Linux是一款开源免费的操作系统。" class="headerlink" title="1.3.1 Linux是一款开源免费的操作系统。"></a>1.3.1 Linux是一款开源免费的操作系统。</h3><p>Linux内核最初只是由芬兰人林纳斯·托瓦兹（Linus Torvalds）在赫尔辛基大学上学时出于个人爱好而编写的。</p>
-<p>Linux是一套免费使用和自由传播的类Unix操作系统，是一个基于POSIX和UNIX的多用户、多任务、支持多线程和多CPU的操作系统。Linux能运行主要的UNIX工具软件、应用程序和网络协议。它支持32位和64位硬件。Linux继承了Unix以网络为核心的设计思想，是一个性能稳定的多用户网络操作系统。</p>
-<p>目前市面上较知名的发行版有：Ubuntu、RedHat、CentOS、Debain、Fedora、SuSE、OpenSUSE                        </p>
-<h3 id="1-3-2-Linux的优势"><a href="#1-3-2-Linux的优势" class="headerlink" title="1.3.2 Linux的优势"></a>1.3.2 Linux的优势</h3><p>Linux系统的优势主要体现在服务器端应用方面，在PC端还是Windows系统对用户操作体验和应用程序的支持更好。具体体现是：</p>
-<ul>
-<li><strong>性能强劲，安全稳定</strong></li>
-</ul>
-<p>Linux本来就是基于Unix概念而发展出来的操作系统，当然也继承了Unix稳定高效的特点。使用Linux系统的主机连续工作1年以上不死机、不重启是非常常见的。所以很多电影、动画中的特效制作这样需要强大运算能力的工作都是运行在Linux系统之上。</p>
-<ul>
-<li><strong>可定制</strong></li>
-</ul>
-<p>如果你对Linux足够了解，完全可以使用Linux内核搭配需要的组件构成一个定制版系统，甚至你可以修改Linux源码进行深度定制</p>
-<p>免费或少许费用</p>
-<p>学习Linux可以免费使用Linux的各种发行版，在商业用途中往往也只是支付很少的费用即可</p>
-<ul>
-<li><strong>硬件配置要求低</strong></li>
-</ul>
-<p>Linux内核只有几KB大小，仅运行内核的话需要的系统开销很小，以命令行方式操作Linux也一样。以图形化界面方式运行Linux需要的资源也比Windows更少。</p>
-<ul>
-<li><strong>嵌入移动设备</strong></li>
-</ul>
-<p>由于Linux只需要很少的资源就能够驱动所有硬件设备工作，所以非常适合嵌入到手机等移动设备中，例如现在我们使用的Android系统就是以Linux为核心的。</p>
-<h2 id="1-4-Linux内核与她的各种发行版"><a href="#1-4-Linux内核与她的各种发行版" class="headerlink" title="1.4. Linux内核与她的各种发行版"></a>1.4. Linux内核与她的各种发行版</h2><p><img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201202014225.png" alt="image-20201202014225462"></p>
-<p>Torvalds和他的虚拟团队的工作仅仅是开发了Linux内核以及附带的一些工具，尚不能作为一个完整的可以交给终端用户使用的操作系统。为了方便用户使用，很多的商业公司或非营利团体，就将Linux 内核（包括工具）与可运行的软件整合起来，再加上系统的安装工具。这个『内核+软件+工具』的完全可安装的整体，我们称之为Linux distribution，这就是Linux的发行版，港台腔叫发行套件。这是Linux这样的开放式系统和Windows、Mac等这些封闭式系统的一个显著差别。</p>
-<p>初学Linux通常会选择CentOS，这其实是RedHat收费后去掉收费功能而发布的一个免费的社区版。</p>
-<p>主要的Linux发行版有：</p>
-<p>●<strong>Red Hat: <a target="_blank" rel="noopener" href="http://www.redhat.com/">http://www.redhat.com</a></strong></p>
-<p><strong>●Fedora: <a target="_blank" rel="noopener" href="http://fedoraproject.org/">http://fedoraproject.org/</a></strong></p>
-<p><strong>●Debian: <a target="_blank" rel="noopener" href="http://www.debian.org/">http://www.debian.org/</a></strong></p>
-<p><strong>●Ubuntu: <a target="_blank" rel="noopener" href="http://www.ubuntu.com/">http://www.ubuntu.com/</a></strong></p>
-<p><strong>●CentOS: <a target="_blank" rel="noopener" href="http://www.centos.org/">http://www.centos.org/</a></strong></p>
-<p>我们可以从网易开源镜像站获取CentOS系统的镜像文件</p>
-<p><a target="_blank" rel="noopener" href="http://mirrors.163.com/">http://mirrors.163.com/</a></p>
 
     
 
@@ -418,7 +404,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://maguscloud.ink/2018/12/01/Linux简介/" title="01——Linux简介" target="_blank">http://maguscloud.ink/2018/12/01/Linux简介/</a>
+          <a href="http://maguscloud.ink/2018/10/05/Linux文件结构/" title="03——Linux文件和目录结构" target="_blank">http://maguscloud.ink/2018/10/05/Linux文件结构/</a>
         </li>
         
         <li>
@@ -507,7 +493,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://maguscloud.ink/2018/12/01/Linux%E7%AE%80%E4%BB%8B/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://maguscloud.ink/2018/10/05/Linux%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -522,18 +508,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2018/12/01/Linux%E7%9A%84Vim%E7%BC%96%E8%BE%91%E5%99%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/10/05/Linux%E5%AE%89%E8%A3%85/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          04——Linux中的VIM编辑器
+          02——Linux安装
         
       </div>
     </a>
   
   
-    <a href="/2018/12/01/Linux%E7%9A%84%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE%E5%92%8C%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86%E6%93%8D%E4%BD%9C/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">05——Linux网络配置和系统管理操作</div>
+    <a href="/2018/10/05/Linux%E7%9A%84Vim%E7%BC%96%E8%BE%91%E5%99%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">04——Linux中的VIM编辑器</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -560,7 +546,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC1%E7%AB%A0-Linux%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">第1章 Linux简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1%E5%BC%80%E6%BA%90%E7%9A%84%E5%8A%9B%E9%87%8F"><span class="toc-number">1.1.</span> <span class="toc-text">1.1开源的力量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-1-%E6%88%91%E4%BB%AC%E5%B7%B2%E7%BB%8F%E7%94%A8%E8%BF%87%E7%9A%84%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1.1 我们已经用过的开源软件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-2-%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6%E9%A2%86%E5%9F%9F%E7%9A%84%E6%97%97%E5%B8%9C%EF%BC%9ALinux"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.1.2 开源软件领域的旗帜：Linux</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-3-%E8%BD%AF%E4%BB%B6%E5%BC%80%E6%BA%90%E7%9A%84%E5%A5%BD%E5%A4%84"><span class="toc-number">1.1.3.</span> <span class="toc-text">1.1.3 软件开源的好处</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-Linux%E7%9A%84%E6%9D%A5%E5%8E%86"><span class="toc-number">1.2.</span> <span class="toc-text">1.2. Linux的来历</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-1-Unix%E7%9A%84%E5%B0%B4%E5%B0%AC"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.2.1 Unix的尴尬</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-2-%E7%94%A8%E4%BA%8E%E6%95%99%E5%AD%A6%E7%9A%84Minix"><span class="toc-number">1.2.2.</span> <span class="toc-text">1.2.2 用于教学的Minix</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-3-%E5%8F%97%E5%88%B0%E5%90%AF%E5%8F%91%E7%9A%84Linux"><span class="toc-number">1.2.3.</span> <span class="toc-text">1.2.3 受到启发的Linux</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-Linux%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">1.3.</span> <span class="toc-text">1.3. Linux是什么？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-1-Linux%E6%98%AF%E4%B8%80%E6%AC%BE%E5%BC%80%E6%BA%90%E5%85%8D%E8%B4%B9%E7%9A%84%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E3%80%82"><span class="toc-number">1.3.1.</span> <span class="toc-text">1.3.1 Linux是一款开源免费的操作系统。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-2-Linux%E7%9A%84%E4%BC%98%E5%8A%BF"><span class="toc-number">1.3.2.</span> <span class="toc-text">1.3.2 Linux的优势</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-Linux%E5%86%85%E6%A0%B8%E4%B8%8E%E5%A5%B9%E7%9A%84%E5%90%84%E7%A7%8D%E5%8F%91%E8%A1%8C%E7%89%88"><span class="toc-number">1.4.</span> <span class="toc-text">1.4. Linux内核与她的各种发行版</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC3%E7%AB%A0-%E6%96%87%E4%BB%B6%E5%92%8C%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"><span class="toc-number">1.</span> <span class="toc-text">第3章 文件和目录结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-%E6%96%87%E4%BB%B6"><span class="toc-number">1.1.</span> <span class="toc-text">3.1 文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-Linux%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"><span class="toc-number">1.2.</span> <span class="toc-text">3.2 Linux目录结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-Linux%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%9A%84%E8%B7%AF%E5%BE%84"><span class="toc-number">1.3.</span> <span class="toc-text">3.3 Linux系统中的路径</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4-%E7%94%A8%E6%88%B7%E5%AE%B6%E7%9B%AE%E5%BD%95"><span class="toc-number">1.4.</span> <span class="toc-text">3.4 用户家目录</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
