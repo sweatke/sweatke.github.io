@@ -362,101 +362,10 @@
     
     
     <h2 id="5-1-前期准备工作"><a href="#5-1-前期准备工作" class="headerlink" title="5.1 前期准备工作"></a>5.1 前期准备工作</h2><ol>
-<li>CentOS联网 </li>
-</ol>
-<p>配置CentOS能连接外网。Linux虚拟机ping <a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a> 是畅通的</p>
-<p><font color=red>注意：采用root角色编译</font>，减少文件夹权限出现问题</p>
-<ol start="2">
-<li>jar包准备(hadoop源码、JDK8、maven、ant 、protobuf)</li>
-</ol>
-<p>（1）hadoop-2.7.2-src.tar.gz</p>
-<p>（2）jdk-8u144-linux-x64.tar.gz</p>
-<p>（3）apache-ant-1.9.9-bin.tar.gz（build工具，打包用的）</p>
-<p>（4）apache-maven-3.0.5-bin.tar.gz</p>
-<p>（5）protobuf-2.5.0.tar.gz（序列化的框架）</p>
-<h2 id="5-2-jar包安装"><a href="#5-2-jar包安装" class="headerlink" title="5.2 jar包安装"></a>5.2 jar包安装</h2><p><font color=red>注意：所有操作必须在root用户下完成</font></p>
-<ol>
-<li>JDK解压、配置环境变量 JAVA_HOME和PATH，验证java-version(如下都需要验证是否配置成功)</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop101 software] # tar -zxf jdk-8u144-linux-x64.tar.gz -C &#x2F;opt&#x2F;module&#x2F;</span><br><span class="line"></span><br><span class="line">[root@hadoop101 software]# vi &#x2F;etc&#x2F;profile</span><br><span class="line">#JAVA_HOME：</span><br><span class="line">export JAVA_HOME&#x3D;&#x2F;opt&#x2F;module&#x2F;jdk1.8.0_144</span><br><span class="line">export PATH&#x3D;$PATH:$JAVA_HOME&#x2F;bin</span><br><span class="line"></span><br><span class="line">[root@hadoop101 software]#source &#x2F;etc&#x2F;profile</span><br></pre></td></tr></table></figure>
-
-<p><strong>验证命令：java -version</strong></p>
-<ol start="2">
-<li>Maven解压、配置  MAVEN_HOME和PATH</li>
-</ol>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop101 software]# tar -zxvf apache-maven-3.0.5-bin.tar.gz -C /opt/module/</span><br><span class="line"></span><br><span class="line">[root@hadoop101 apache-maven-3.0.5]# vi conf/settings.xml</span><br><span class="line"><span class="tag">&lt;<span class="name">mirrors</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- mirror</span></span><br><span class="line"><span class="comment">   | Specifies a repository mirror site to use instead of a given repository. The repository that</span></span><br><span class="line"><span class="comment">   | this mirror serves has an ID that matches the mirrorOf element of this mirror. IDs are used</span></span><br><span class="line"><span class="comment">   | for inheritance and direct lookup purposes, and must be unique across the set of mirrors.</span></span><br><span class="line"><span class="comment">   |</span></span><br><span class="line"><span class="comment">&lt;mirror&gt;</span></span><br><span class="line"><span class="comment">    &lt;id&gt;mirrorId&lt;/id&gt;</span></span><br><span class="line"><span class="comment">    &lt;mirrorOf&gt;repositoryId&lt;/mirrorOf&gt;</span></span><br><span class="line"><span class="comment">    &lt;name&gt;Human Readable Name for this Mirror.&lt;/name&gt;</span></span><br><span class="line"><span class="comment">    &lt;url&gt;http://my.repository.com/repo/path&lt;/url&gt;</span></span><br><span class="line"><span class="comment">   &lt;/mirror&gt;</span></span><br><span class="line"><span class="comment">   --&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-aliyun<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">name</span>&gt;</span>Nexus aliyun<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirrors</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop101 apache-maven-3.0.5]# vi &#x2F;etc&#x2F;profile</span><br><span class="line">#MAVEN_HOME</span><br><span class="line">export MAVEN_HOME&#x3D;&#x2F;opt&#x2F;module&#x2F;apache-maven-3.0.5</span><br><span class="line">export PATH&#x3D;$PATH:$MAVEN_HOME&#x2F;bin</span><br><span class="line">[root@hadoop101 software]#source &#x2F;etc&#x2F;profile</span><br></pre></td></tr></table></figure>
-
-<p><strong>验证命令：mvn -version</strong></p>
-<ol start="3">
-<li>ant解压、配置  ANT _HOME和PATH</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop101 software]# tar -zxvf apache-ant-1.9.9-bin.tar.gz -C &#x2F;opt&#x2F;module&#x2F;</span><br><span class="line"></span><br><span class="line">[root@hadoop101 apache-ant-1.9.9]# vi &#x2F;etc&#x2F;profile</span><br><span class="line">#ANT_HOME</span><br><span class="line">export ANT_HOME&#x3D;&#x2F;opt&#x2F;module&#x2F;apache-ant-1.9.9</span><br><span class="line">export PATH&#x3D;$PATH:$ANT_HOME&#x2F;bin</span><br><span class="line">[root@hadoop101 software]#source &#x2F;etc&#x2F;profile</span><br></pre></td></tr></table></figure>
-
-<p><strong>验证命令：ant -version</strong></p>
-<ol start="4">
-<li>安装  glibc-headers 和  g++  命令如下</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop101 apache-ant-1.9.9]# yum install glibc-headers</span><br><span class="line">[root@hadoop101 apache-ant-1.9.9]# yum install gcc-c++</span><br></pre></td></tr></table></figure>
-
-<ol start="5">
-<li>安装make和cmake</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop101 apache-ant-1.9.9]# yum install make</span><br><span class="line">[root@hadoop101 apache-ant-1.9.9]# yum install cmake</span><br></pre></td></tr></table></figure>
-
-<ol start="6">
-<li>解压protobuf ，<font color=red>进入到解压后protobuf主目录</font>，/opt/module/protobuf-2.5.0，然后相继执行命令</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop101 software]# tar -zxvf protobuf-2.5.0.tar.gz -C &#x2F;opt&#x2F;module&#x2F;</span><br><span class="line">[root@hadoop101 opt]# cd &#x2F;opt&#x2F;module&#x2F;protobuf-2.5.0&#x2F;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop101 protobuf-2.5.0]#.&#x2F;configure </span><br><span class="line">[root@hadoop101 protobuf-2.5.0]# make </span><br><span class="line">[root@hadoop101 protobuf-2.5.0]# make check </span><br><span class="line">[root@hadoop101 protobuf-2.5.0]# make install </span><br><span class="line">[root@hadoop101 protobuf-2.5.0]# ldconfig </span><br><span class="line"></span><br><span class="line">[root@hadoop101 hadoop-dist]# vi &#x2F;etc&#x2F;profile</span><br><span class="line"></span><br><span class="line">#LD_LIBRARY_PATH</span><br><span class="line">export LD_LIBRARY_PATH&#x3D;&#x2F;opt&#x2F;module&#x2F;protobuf-2.5.0</span><br><span class="line">export PATH&#x3D;$PATH:$LD_LIBRARY_PATH</span><br><span class="line"></span><br><span class="line">[root@hadoop101 software]#source &#x2F;etc&#x2F;profile</span><br></pre></td></tr></table></figure>
-
-<p><strong>验证命令：protoc –version</strong></p>
-<ol start="7">
-<li>安装openssl库</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop101 software]#yum install openssl-devel</span><br></pre></td></tr></table></figure>
-
-<ol start="8">
-<li>安装 ncurses-devel库</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop101 software]#yum install ncurses-devel</span><br></pre></td></tr></table></figure>
-
-<p>到此，编译工具安装基本完成。</p>
-<h2 id="5-3-编译源码"><a href="#5-3-编译源码" class="headerlink" title="5.3 编译源码"></a>5.3 编译源码</h2><ol>
-<li>解压源码到/opt/目录</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop101 software]# tar -zxvf hadoop-2.7.2-src.tar.gz -C &#x2F;opt&#x2F;</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>进入到hadoop源码主目录</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop101 hadoop-2.7.2-src]# pwd</span><br><span class="line">&#x2F;opt&#x2F;hadoop-2.7.2-src</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>通过maven执行编译命令</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop101 hadoop-2.7.2-src]#mvn package -Pdist,native -DskipTests -Dtar</span><br></pre></td></tr></table></figure>
-
-<p>等待时间30分钟左右，最终成功是全部SUCCESS，如图</p>
-<p><img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201206203653.png" alt="image-20201206203652964"></p>
-<ol start="4">
-<li>成功的64位hadoop包在/opt/hadoop-2.7.2-src/hadoop-dist/target下</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop101 target]# pwd</span><br><span class="line">&#x2F;opt&#x2F;hadoop-2.7.2-src&#x2F;hadoop-dist&#x2F;target</span><br></pre></td></tr></table></figure>
-
-<ol start="5">
-<li>编译源码过程中常见的问题及解决方案</li>
-</ol>
-<p>（1）MAVEN install时候JVM内存溢出</p>
-<p>处理方式：在环境配置文件和maven的执行文件均可调整MAVEN_OPT的heap大小。（详情查阅MAVEN 编译 JVM调优问题，如：<a target="_blank" rel="noopener" href="http://outofmemory.cn/code-snippet/12652/maven-outofmemoryerror-method">http://outofmemory.cn/code-snippet/12652/maven-outofmemoryerror-method</a>)</p>
-<p>（2）编译期间maven报错。可能网络阻塞问题导致依赖库下载不完整导致，多次执行命令（一次通过比较难）：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@hadoop101 hadoop-2.7.2-src]#mvn package -Pdist,nativeN -DskipTests -Dtar</span><br></pre></td></tr></table></figure>
-
-<p>（3）报ant、protobuf等错误，插件下载未完整或者插件版本问题，最开始链接有较多特殊情况，同时推荐</p>
-<p>2.7.0版本的问题汇总帖子 <a target="_blank" rel="noopener" href="http://www.tuicool.com/articles/IBn63qf">http://www.tuicool.com/articles/IBn63qf</a></p>
-
+<li>CentOS联网
+    
+    <a class="article-more-a" href="/2018/10/07/A_Hadoop%E5%85%A5%E9%97%A805/#more">more >></a>
+    
     
 
     
@@ -556,40 +465,10 @@
         
     
     
-    <p>1）防火墙没关闭、或者没有启动YARN</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO client.RMProxy: Connecting to ResourceManager at hadoop108&#x2F;192.168.10.108:8032</span><br></pre></td></tr></table></figure>
-
-<p>2）主机名称配置错误</p>
-<p>3）IP地址配置错误</p>
-<p>4）ssh没有配置好</p>
-<p>5）root用户和atguigu两个用户启动集群不统一</p>
-<p>6）配置文件修改不细心</p>
-<p>7）未编译源码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Unable to load native-hadoop library for your platform... using builtin-java classes where applicable</span><br><span class="line"></span><br><span class="line">17&#x2F;05&#x2F;22 15:38:58 INFO client.RMProxy: Connecting to ResourceManager at hadoop108&#x2F;192.168.10.108:8032</span><br></pre></td></tr></table></figure>
-
-<p>8）不识别主机名称</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">java.net.UnknownHostException: hadoop102: hadoop102</span><br><span class="line">   at java.net.InetAddress.getLocalHost(InetAddress.java:1475)</span><br><span class="line">   at org.apache.hadoop.mapreduce.JobSubmitter.submitJobInternal(JobSubmitter.java:146)</span><br><span class="line">   at org.apache.hadoop.mapreduce.Job$10.run(Job.java:1290)</span><br><span class="line">   at org.apache.hadoop.mapreduce.Job$10.run(Job.java:1287)</span><br><span class="line">   at java.security.AccessController.doPrivileged(Native Method)</span><br><span class="line">   at javax.security.auth.Subject.doAs(Subject.java:415)</span><br></pre></td></tr></table></figure>
-
-<p>解决办法：</p>
-<p>（1）在/etc/hosts文件中添加192.168.1.102 hadoop102</p>
-<p>（2）主机名称不要起hadoop hadoop000等特殊名称</p>
-<p>9）DataNode和NameNode进程同时只能工作一个。</p>
-<img src="https://gitee.com/Magus9104/blog_pic/raw/master/img/20201206210125.png" alt="image-20201206210125102" style="zoom:80%;" />
-
-<p>10）执行命令不生效，粘贴word中命令时，遇到-和长–没区分开。导致命令失效</p>
-<p>解决办法：尽量不要粘贴word中代码。</p>
-<p>11）jps发现进程已经没有，但是重新启动集群，提示进程已经开启。原因是在linux的根目录下/tmp目录中存在启动的进程临时文件，将集群相关进程删除掉，再重新启动集群。</p>
-<p>12）jps不生效。</p>
-<p>原因：全局变量hadoop java没有生效。解决办法：需要source /etc/profile文件。</p>
-<p>13）8088端口连接不上</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[atguigu@hadoop102 桌面]$ cat &#x2F;etc&#x2F;hosts</span><br></pre></td></tr></table></figure>
-
-<p>注释掉如下代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#127.0.0.1  localhost localhost.localdomain localhost4 localhost4.localdomain4</span><br><span class="line">#::1     hadoop102</span><br></pre></td></tr></table></figure>
-
-
-
-
+    <p>1）防火墙没关闭、或者没有启动YARN
+    
+    <a class="article-more-a" href="/2018/10/07/A_Hadoop%E5%85%A5%E9%97%A806/#more">more >></a>
+    
     
 
     
